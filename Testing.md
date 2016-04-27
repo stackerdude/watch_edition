@@ -1,9 +1,5 @@
-Watch edition uses Jasmine and the Jasmine jQuery matchers plugin for testing.
+Tests are written using Jasmine and run using Karma. jQuery matchers are available to make view testing easier.
 
-## Jasmine
-
-[Jasmine Official website](http://jasmine.github.io/)
-
-## Jasmine jQuery Matchers
-
-[Jasmine jQuery Matchers](https://github.com/velesin/jasmine-jquery)
+- [Karma](http://karma-runner.github.io/0.12/index.html) - Test runner
+- [Jasmine](http://jasmine.github.io/) - Javascript testing
+- [Jasmine jQuery Matchers](https://github.com/unindented/jasmine-jquery-matchers/) - jQuery based matchers for testing
