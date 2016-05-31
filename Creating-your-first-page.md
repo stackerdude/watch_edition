@@ -50,6 +50,22 @@ The last thing to do is update your render method to return the template content
         return this;
     }
 
+## Passing data to templates
+
+The best thing about templates is you can pass data to them, this is allows you to make variations of a page without having to create multiple versions.
+
+Change the render method in `client/src/js/pages/demoPage.js` to look like this:
+
+    render: function() {
+        this.$el.html(this.template({name: 'John Smith'}));
+        return this;
+    }
+
+Change the contents of the template to look like this:
+
+    <h1>{{name}}'s page</h1>
+    <p>What a great page!</p>
+
 
 
 
