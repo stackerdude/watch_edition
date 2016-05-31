@@ -1,8 +1,10 @@
 For the purpose of this exercise we'll create a new page called "Demo".
 
-## The Starting point
+## A common starting point
 
-Create a new file called `demoPage.js` inside `client/src/js/pages`
+Almost every page starts the same way.
+
+First create a new file called `demoPage.js` inside `client/src/js/pages`
 
 Your new page will be based on the generic pageView so you need to add the following lines
 
@@ -17,6 +19,15 @@ Your new page will be based on the generic pageView so you need to add the follo
 
     module.exports = demoPage;
 
+What you're doing here is creating a new type of page which extends the functionality of the default page in the framework.
+
+Now in `client/src/js/pages/index.js` you need to add your page to the exports:
+
+    module.exports = {
+        // existing content...
+        demo: require(./demoPage.js)
+    }
+
 This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
 
 ## Adding some content
@@ -29,6 +40,8 @@ If we wanted the page to display the text `demo page` we could do the following:
         this.$el.html("demo page");
         return this;
     }
+
+It's best to put your render method towards the end of the file to keep things readable.
 
 ## Using templates
 
@@ -50,7 +63,7 @@ The last thing to do is update your render method to return the template content
         return this;
     }
 
-## Passing data to templates
+## Passing data to a template
 
 The best thing about templates is you can pass data to them, this is allows you to make variations of a page without having to create multiple versions.
 
@@ -65,7 +78,3 @@ Change the contents of the template to look like this:
 
     <h1>{{name}}'s page</h1>
     <p>What a great page!</p>
-
-
-
-
