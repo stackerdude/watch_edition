@@ -7,27 +7,27 @@ Almost every page starts the same way.
 First create a new file called `demoPage.js` inside `client/src/js/pages`
 
 Your new page will be based on the generic pageView so you need to add the following lines
+```javascript
+'use strict';
 
-    'use strict';
+var Page = require('../framework/page');
+var demoPage = Page.extend({
 
-    var Page = require('../framework/page');
-    var demoPage = Page.extend({
+    id: 'demo'
 
-        id: 'demo'
+});
 
-    });
-
-    module.exports = demoPage;
-
+module.exports = demoPage;
+```
 What you're doing here is creating a new type of page which extends the functionality of the default page in the framework.
 
 Now in `client/src/js/pages/index.js` you need to add your page to the exports:
-
-    module.exports = {
-        // existing content...
-        demo: require(./demoPage.js)
-    }
-
+```javascript
+module.exports = {
+    // existing content...
+    demo: require(./demoPage.js)
+}
+```
 This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
 
 ## Adding some content
@@ -36,11 +36,12 @@ In order to display some content you'll need to add render method.
 
 If we wanted the page to display the text `demo page` we could do the following:
 
-    render: function() {
-        this.$el.html("demo page");
-        return this;
-    }
-
+```javascript
+render: function() {
+    this.$el.html("demo page");
+    return this;
+}
+```
 It's best to put your render method towards the end of the file to keep things readable.
 
 ## Using templates
@@ -49,32 +50,37 @@ Returning strings in your render method gets messy quickly, especially once you 
 
 Add a template attribute to your page object, to keep things readable keep it near the ID attribute. It should look like this:
 
-     template: require('../../templates/pages/demo.hbs')
+```javascript
+template: require('../../templates/pages/demo.hbs')
+```
 
 Now it's time to add your template. In `client/src/templates` make a file called `demo.hbs` with the the following content:
-
-    <h1>This is a demo</h1>
-    <p>What a great page!</p>
+```html
+<h1>This is a demo</h1>
+<p>What a great page!</p>
+```
 
 The last thing to do is update your render method to return the template contents instead of a string:
-
-    render: function() {
-        this.$el.html(this.template());
-        return this;
-    }
+```javascript
+render: function() {
+    this.$el.html(this.template());
+    return this;
+}
+```
 
 ## Passing data to a template
 
 The best thing about templates is you can pass data to them, this is allows you to make variations of a page without having to create multiple versions.
 
 Change the render method in `client/src/js/pages/demoPage.js` to look like this:
-
-    render: function() {
-        this.$el.html(this.template({name: 'John Smith'}));
-        return this;
-    }
-
+```javascript
+render: function() {
+    this.$el.html(this.template({name: 'John Smith'}));
+    return this;
+}
+```
 Change the contents of the template to look like this:
-
-    <h1>{{name}}'s page</h1>
-    <p>What a great page!</p>
+```html
+<h1>{{name}}'s page</h1>
+<p>What a great page!</p>
+```
