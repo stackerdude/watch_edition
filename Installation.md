@@ -26,14 +26,10 @@ Now that you have Git and NodeJS installed you are ready to download this Git re
 
 ```shell
 cd path_to_team_repo
-npm install -g grunt-cli jscs yo
-npm install
-grunt
+./go start
 ```
 
-**When the prompt appears select "Start your development environment"**
-
-You should now be able to view the demo Proto Watch app in your browser at http://localhost:9001.
+The script should run your initial setup, then start your app. You should now be able to view the demo Proto Watch app in your browser at http://localhost:8080.
 
 ##FAQ##
 
