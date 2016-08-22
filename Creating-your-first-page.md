@@ -10,7 +10,7 @@ Your new page will be based on the generic pageView so you need to add the follo
 ```javascript
 'use strict';
 
-var Page = require('../framework/page');
+var Page = require('watch_framework').Page;
 var demoPage = Page.extend({
 
     id: 'demo'
@@ -25,7 +25,7 @@ Now in `client/src/js/pages/index.js` you need to add your page to the exports:
 ```javascript
 module.exports = {
     // existing content...
-    demo: require(./demoPage.js)
+    demo: require(./demoPage)
 }
 ```
 This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
