@@ -1,19 +1,60 @@
 For the purpose of this exercise we'll create a new page called "Demo".
 
+## Create a new link on your home page
+
+Go to `client/src/js/pages` and edit the file called `homePage.js`.
+
+```
+...
+buttonEvents: {
+    right: 'goToContacts',
+    top: 'scrollUp',
+    bottom: 'scrollDown',
+    left: 'goToMyDemoPage'
+}
+...
+
+```
+
+## Test Driven Development
+
+* Write a failing test
+* Write just enough code to make the test pass
+* Refactor
+* Write the next failing test
+* Rinse and repeat
+
+### Write a failing test
+
+Open `client/spec/pages/homePage.js`
+
+Add the following test:
+```
+    describe('left', function () {
+      it('should take the user to the demo page', function () {
+        spyOn(page, 'goToDemoPage');
+        page.configureButtons();
+        eventHub.trigger('left');
+        expect(page.gotodemopage).toHaveBeenCalled();
+      });
+    });
+```
+
+
 ## A common starting point
 
-Almost every page starts the same way.
+    Almost every page starts the same way.
 
-First create a new file called `demoPage.js` inside `client/src/js/pages`
+    First create a new file called `demoPage.js` inside `client/src/js/pages`
 
-Your new page will be based on the generic pageView so you need to add the following lines
-```javascript
-'use strict';
+    Your new page will be based on the generic pageView so you need to add the following lines
+    ```javascript
+    'use strict';
 
-var Page = require('watch_framework').Page;
-var demoPage = Page.extend({
+    var Page = require('watch_framework').Page;
+    var demoPage = Page.extend({
 
-    id: 'demo'
+id: 'demo'
 
 });
 
@@ -25,7 +66,7 @@ Now in `client/src/js/pages/index.js` you need to add your page to the exports:
 ```javascript
 module.exports = {
     // existing content...
-    demo: require(./demoPage)
+demo: require(./demoPage)
 }
 ```
 This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
