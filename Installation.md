@@ -28,9 +28,3 @@ cd path_to_team_repo
 ```
 
 The script should run your initial setup, then start your app. You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080).
-
-##FAQ##
-
-**I already have node installed, but it's a different version**
-
-Use N to easily install and switch between different versions of Node https://github.com/tj/n
