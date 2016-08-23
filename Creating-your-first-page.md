@@ -55,6 +55,8 @@ goToMyDemoPage: function() {
     window.App.navigate('demo');
 },
 ```
+Run the tests again. They should now pass.
+
 ## A common starting point
 Almost every page starts the same way.
 
@@ -73,6 +75,8 @@ var demoPage = Page.extend({
 
 module.exports = demoPage;
 ```
+This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
+
 What you're doing here is creating a new type of page which extends the functionality of the default page in the framework.
 
 Now in `client/src/js/pages/index.js` you need to add your page to the exports:
@@ -82,8 +86,6 @@ module.exports = {
     demo: require('./demoPage')
 }
 ```
-This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
-
 ## Check it out
 Now go to your app's home page and click on the left button.
 
