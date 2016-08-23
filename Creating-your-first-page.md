@@ -75,9 +75,9 @@ var demoPage = Page.extend({
 
 module.exports = demoPage;
 ```
-This is the starting point for every new page. What's going on here is you're creating a new type of view which extends the default page and giving it a custom ID. The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique id attribute. If the ID attribute is based on the name of the page this you're generally unlikely to run in to any issues.
+This is the starting point for every new page. Here you're creating a new type of view which extends the default page and you are giving it a custom ID (in this case, the ID is 'demo'). 
 
-What you're doing here is creating a new type of page which extends the functionality of the default page in the framework.
+The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique ID attribute, and that the page name and the ID name match.
 
 Now in `client/src/js/pages/index.js` you need to add your page to the exports:
 ```javascript
