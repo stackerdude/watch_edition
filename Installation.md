@@ -27,7 +27,7 @@ cd path_to_team_repo
 ./go start
 ```
 
-The script should run your initial setup, then start your app. You should now be able to view the demo Proto Watch app in your browser at http://localhost:8080.
+The script should run your initial setup, then start your app. You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080).
 
 ##FAQ##
 
