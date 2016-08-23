@@ -10,9 +10,7 @@ All pages will have a red background
 
 # Page specific styles
 
-Replace my page with the name of your own page.
-
-Add an id attribute in the page view
+Given the example page:
 
     var myPage = Page.extend({
 
@@ -24,11 +22,11 @@ Add an id attribute in the page view
 
     });
 
-Now create a new SCSS file `client/src/styles/pages/_my_page.scss`
+1. Create a new SCSS file `client/src/styles/pages/_my_page.scss`
 
-Include the file in `client/src/app.scss` with the following code `@import 'pages/my_page';`
+2. Include the SCSS file in `client/src/app.scss` with the following code `@import 'pages/my_page';`
 
-Now add your custom styles
+3. Add your custom styles using the selector `#my-page` to limit the scope.
 
     #my-page {
 
