@@ -38,6 +38,8 @@ describe('left', function () {
     });
 });
 ```
+Run the tests with `./go test`
+
 This test should fail along lines similar to the the following:
 ```bash
 PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 33 of 35 (1 FAILED) (skipped 2) (0.054 secs / 0.035 secs)
@@ -218,7 +220,7 @@ In `demoPage.spec.js` add a new test:
     it('should pass a variable to the template', function() {
 
       page.render();
-      expect(page.$el).toContainHtml('<h2>Welcome, John Smith</h2>');
+      expect(page.$el).toContainHtml('<h2>Welcome, John Smith!</h2>');
 
     });
 ```
