@@ -4,11 +4,12 @@ You can create styles which will apply to any page.
 
 1. Open `client/src/app.scss`
 
-2. To give all pages a red background by default
+2. To give all pages a red background by default add the following code
 
-    .page {
-        background-color: red;
-    }
+        .page {
+            background-color: red;
+        }
+
 
 # Page specific styles
 
@@ -30,10 +31,10 @@ Given the example page:
 
 3. Add your custom styles using the selector `#my-page` to limit the scope.
 
-    #my-page {
+        #my-page {
 
-        p {
-            color: red;
+            p {
+                color: red;
+            }
+
         }
-
-    }
