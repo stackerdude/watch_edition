@@ -192,7 +192,7 @@ Add a template attribute to your page object, to keep things readable keep it ne
 ```javascript
 template: require('../../templates/pages/demo.hbs')
 ```
-Now it's time to add your template. In `client/src/templates` make a file called `demo.hbs` with the the following content:
+Now it's time to add your template. In `client/src/templates/pages` make a file called `demo.hbs` with the the following content:
 ```html
 <h1>This is a demo</h1>
 <p>What a great page!</p>
