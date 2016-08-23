@@ -1,8 +1,10 @@
 # Generic styles
 
-These should be placed in `client/src/app.scss`
+You can create styles which will apply to any page.
 
-All pages will have a red background
+1. Open `client/src/app.scss`
+
+2. To give all pages a red background by default
 
     .page {
         background-color: red;
