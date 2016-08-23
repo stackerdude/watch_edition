@@ -31,6 +31,6 @@ The script should run your initial setup, then start your app. You should now be
 
 ##FAQ##
 
-**I already have node install, but it's a different version**
+**I already have node installed, but it's a different version**
 
-Use N to easily install and switch between different vesions of Node https://github.com/tj/n
+Use N to easily install and switch between different versions of Node https://github.com/tj/n
