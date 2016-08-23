@@ -211,11 +211,17 @@ The best thing about templates is you can pass data to them, this is allows you 
 
 ### Write a new test
 
-In `demoPage.spec.js` add:
+In `demoPage.spec.js` add a new test:
+```javascript
+    it('should pass a variable to the template', function() {
 
+      page.render();
+      expect(page.$el).toContainHtml('<h2>Welcome, John Smith</h2>');
+
+    });
 ```
- 
-```
+
+Run the tests and watch them fail.
 
 Change the render method in `client/src/js/pages/demoPage.js` to look like this:
 ```javascript
@@ -226,6 +232,8 @@ render: function() {
 ```
 Change the contents of the template to look like this:
 ```html
-<h1>{{name}}'s page</h1>
+<h1>This is a demo</h1>
+<h2>Welcome, {{name}}!</h2>
 <p>What a great page!</p>
 ```
+
