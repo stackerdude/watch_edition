@@ -95,7 +95,7 @@ Let's fix that now.
 
 ## First, write the test
 
-We want our Demo page to contain the text `This is a demo`, so we're going to start by writing a test for that.
+We want our Demo page to contain the text "This is a demo", so we're going to start by writing a test for that.
 
 In the `client/spec/pages` folder, create a new file called `demoPage.spec.js`.
 
@@ -138,7 +138,7 @@ TOTAL: 1 FAILED, 33 SUCCESS
 
 In order to display some content you'll need to add render method.
 
-We want the page to display the text `This is a demo` so we will do the following:
+We want the page to display the text "This is a demo" so we will do the following:
 ```javascript
 render: function() {
     this.$el.html("This is a demo");
