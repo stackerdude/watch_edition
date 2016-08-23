@@ -2,7 +2,7 @@ For the purpose of this exercise we'll create a new page called "Demo".
 
 ## Create a new link on your home page
 
-Go to `client/src/js/pages` and edit the file called `homePage.spec.js`.
+Go to `client/src/js/pages` and edit the file called `homePage.js`.
 
 ```
 buttonEvents: {
@@ -25,7 +25,7 @@ The principles of Test Driven Development are straightforward:
 
 ### Write a failing test
 
-Open `client/spec/pages/homePage.js`
+Open `client/spec/pages/homePage.spec.js`
 
 Add the following test:
 ```javascript
@@ -220,7 +220,6 @@ In `demoPage.spec.js` add a new test:
 
     });
 ```
-
 Run the tests and watch them fail.
 
 Change the render method in `client/src/js/pages/demoPage.js` to look like this:
