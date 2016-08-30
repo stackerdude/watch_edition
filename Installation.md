@@ -30,6 +30,8 @@ This article will help you get Node and NPM installed using Homebrew (our prefer
 3. Install [CCMenu](http://ccmenu.org/)
 4. Git clone your teams repo
 
+**Now run the initial setup and start the app!**
+
 ```shell
 cd path_to_team_repo
 ./go start
