@@ -46,6 +46,8 @@ The script should run your initial setup, then start your app. You should now be
 3. Install [Docker](https://docs.docker.com/docker-for-mac/) for Mac
 4. Git clone your teams repo
 
+**Now build and run the app inside a docker container!**
+
 ```shell
 cd path_to_team_repo
 docker-compose up
@@ -61,6 +63,8 @@ When installing Docker for Windows, make sure you read the installation instruct
 2. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html) 
 3. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
 4. Git clone your teams repo
+
+**Now build and run the app inside a docker container!**
 
 ```shell
 cd path_to_team_repo
