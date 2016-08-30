@@ -4,7 +4,7 @@ Before you can setup your Proto Watch development environment you need to have G
 
 It's up to you how you install these. As long as they work correctly it doesn't matter, but if you're not sure you can follow these instructions.
 
-### Windows setup instructions
+### Windows Setup Instructions
 
 1. Install [Git](https://desktop.github.com/)
 2. Install [Node](https://nodejs.org/download/)
