@@ -46,7 +46,7 @@ The script should run your initial setup, then start your app. You should now be
 3. Install [Docker](https://docs.docker.com/docker-for-mac/) for Mac
 4. Git clone your teams repo
 
-**Now build and run the app inside a docker container!**
+**Now build and run the app inside a Docker container!**
 
 ```shell
 cd path_to_team_repo
@@ -64,7 +64,7 @@ When installing Docker for Windows, make sure you read the installation instruct
 3. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
 4. Git clone your teams repo
 
-**Now build and run the app inside a docker container!**
+**Now build and run the app inside a Docker container!**
 
 ```shell
 cd path_to_team_repo
