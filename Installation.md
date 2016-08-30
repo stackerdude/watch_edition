@@ -29,6 +29,11 @@ cd path_to_team_repo
 
 The script should run your initial setup, then start your app. You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080).
 
+### OS X Docker Setup Instructions
+
+1. Install Docker for Mac [Docker](https://docs.docker.com/docker-for-mac/)
+2. Run docker-compose up
+
 ### Windows Docker Setup Instructions
 
 When installing Docker for Windows, make sure you read the installation instructions. Docker for Windows requires 64bit Windows 10 Pro and Microsoft Hyper-V.
