@@ -53,7 +53,7 @@ cd path_to_team_repo
 docker-compose up
 ```
 
-You should now be able to view the demo Proto Watch app in your browser at http://localhost:8080
+You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080)
 
 ### Windows Docker Setup Instructions
 
@@ -71,4 +71,4 @@ cd path_to_team_repo
 docker-compose up
 ```
 
-You should now be able to view the demo Proto Watch app in your browser at http://localhost:8080
+You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080)
