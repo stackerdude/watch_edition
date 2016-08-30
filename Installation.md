@@ -2,7 +2,7 @@
 
 Before you can setup your Proto Watch development environment you need to have Git, NodeJS and CCTray or CCMenu installed and working.
 
-It's up to you how you install these and as long – as they work correctly it doesn't matter – but if you're not sure you can follow these instructions.
+It's up to you how you install these. As long as they work correctly it doesn't matter, but if you're not sure you can follow these instructions.
 
 ### Windows setup instructions
 
