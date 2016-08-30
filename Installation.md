@@ -39,12 +39,26 @@ The script should run your initial setup, then start your app. You should now be
 
 ### OS X Docker Setup Instructions
 
-1. Install [Docker](https://docs.docker.com/docker-for-mac/) for Mac
-2. Run docker-compose up
+1. Install [Git](https://desktop.github.com/)
+2. Install [CCMenu](http://ccmenu.org/)
+3. Install [Docker](https://docs.docker.com/docker-for-mac/) for Mac
+4. Git clone your teams repo
+
+```shell
+cd path_to_team_repo
+docker-compose up
+```
 
 ### Windows Docker Setup Instructions
 
 When installing Docker for Windows, make sure you read the installation instructions. Docker for Windows requires 64bit Windows 10 Pro and Microsoft Hyper-V.
 
-1. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
-2. Run docker-compose up
+1. Install [Git](https://desktop.github.com/)
+2. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html) 
+3. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
+4. Git clone your teams repo
+
+```shell
+cd path_to_team_repo
+docker-compose up
+```
