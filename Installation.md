@@ -31,12 +31,12 @@ The script should run your initial setup, then start your app. You should now be
 
 ### OS X Docker Setup Instructions
 
-1. Install Docker for Mac [Docker](https://docs.docker.com/docker-for-mac/)
+1. Install [Docker](https://docs.docker.com/docker-for-mac/) for Mac
 2. Run docker-compose up
 
 ### Windows Docker Setup Instructions
 
 When installing Docker for Windows, make sure you read the installation instructions. Docker for Windows requires 64bit Windows 10 Pro and Microsoft Hyper-V.
 
-1. Install Docker for Windows [Docker](https://docs.docker.com/docker-for-windows/)
+1. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
 2. Run docker-compose up
