@@ -51,6 +51,8 @@ cd path_to_team_repo
 docker-compose up
 ```
 
+You should now be able to view the demo Proto Watch app in your browser at http://localhost:8080
+
 ### Windows Docker Setup Instructions
 
 When installing Docker for Windows, make sure you read the installation instructions. Docker for Windows requires 64bit Windows 10 Pro and Microsoft Hyper-V.
@@ -64,3 +66,5 @@ When installing Docker for Windows, make sure you read the installation instruct
 cd path_to_team_repo
 docker-compose up
 ```
+
+You should now be able to view the demo Proto Watch app in your browser at http://localhost:8080
