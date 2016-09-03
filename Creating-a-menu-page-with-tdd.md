@@ -37,7 +37,7 @@ describe("The Menu Page", function() {
   describe('rendering', function() {
     it('should produce the correct HTML', function() {
       page.render();
-      expect(page.$el).toContainText("thing: up");
+      expect(page.$el).toContainText("first option: up");
     });
   });
 
@@ -61,7 +61,7 @@ module.exports = Options;
 
 ```
 
-# option.js
+## option.js
 
 ```javascript
 'use strict';
@@ -164,23 +164,23 @@ var menuPage = Menu.extend({
     menuList.add([
       {
         direction: "up",
-        action: "thing"
+        action: "first option"
       },
       {
         direction: "down",
-        action: "another thing"
+        action: "second option"
       },
       {
         direction: "left",
-        action: "thing"
+        action: "third option"
       },
       {
         direction: "right",
-        action: "another thing"
+        action: "fourth option"
       },
       {
         direction: "screen",
-        action: "thing"
+        action: "fifth option"
       }
     ]);
 
