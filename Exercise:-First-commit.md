@@ -1,5 +1,3 @@
-# Initial commit exercise
-
 Everyone on the team should complete this exercise as soon as they have access to the team repo.
 
 ## Instructions
