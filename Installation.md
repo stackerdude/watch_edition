@@ -71,5 +71,11 @@ When installing Docker for Windows, make sure you read the installation instruct
 cd path_to_team_repo
 docker-compose up
 ```
+In case localhost:8080 cannot open due to a refused connection, type the following command into your docker terminal:
+
+```
+docker-machine ip dev
+```
+Type the ip address returned instead of 'localhost' into your browser e.g. http://192.168.99.104:8080
 
 You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080)
