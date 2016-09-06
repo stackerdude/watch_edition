@@ -61,8 +61,9 @@ When installing Docker for Windows, make sure you read the installation instruct
 
 1. Install [Git](https://desktop.github.com/)
 2. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html) 
-3. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
-4. Git clone your teams repo
+3. Install [Hyper-V](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install) on Windows 10
+4. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
+5. Git clone your teams repo
 
 **Now build and run the app inside a Docker container!**
 
