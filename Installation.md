@@ -78,4 +78,4 @@ docker-machine ip dev
 ```
 Type the ip address returned instead of 'localhost' into your browser e.g. http://192.168.99.104:8080
 
-You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080)
+You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080) (or your docker machine's ip address)
