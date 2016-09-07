@@ -72,7 +72,7 @@ When installing Docker on Windows, make sure you read the installation instructi
 cd path_to_team_repo
 docker-compose up
 ```
-In case localhost:8080 cannot open due to a refused connection, type the following command into your docker terminal:
+In case [http://localhost:8080](http://localhost:8080) cannot open due to a refused connection, type the following command into your docker terminal:
 
 ```
 docker-machine ip dev
