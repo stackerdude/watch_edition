@@ -43,7 +43,7 @@ The script should run your initial setup, then start your app. You should now be
 
 1. Install [Git](https://desktop.github.com/)
 2. Install [CCMenu](http://ccmenu.org/)
-3. Install [Docker](https://docs.docker.com/docker-for-mac/) for Mac
+3. Install [Docker](https://docs.docker.com/docker-for-mac/)
 4. Git clone your teams repo
 
 **Now build and run the app inside a Docker container!**
@@ -57,13 +57,12 @@ You should now be able to view the demo Proto Watch app in your browser at [http
 
 ### Windows Docker Setup Instructions
 
-When installing Docker for Windows, make sure you read the installation instructions. Docker for Windows requires 64bit Windows 10 Pro and Microsoft Hyper-V.
+When installing Docker on Windows, make sure you read the installation instructions.
 
 1. Install [Git](https://desktop.github.com/)
 2. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html) 
-3. Install [Hyper-V](https://msdn.microsoft.com/en-us/virtualization/hyperv_on_windows/quick_start/walkthrough_install) on Windows 10
-4. Install [Docker](https://docs.docker.com/docker-for-windows/) for Windows
-5. Git clone your teams repo
+3. Install [Docker](https://docs.docker.com/engine/installation/windows/)
+4. Git clone your teams repo
 
 **Now build and run the app inside a Docker container!**
 
