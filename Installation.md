@@ -41,6 +41,8 @@ The script should run your initial setup, then start your app. You should now be
 
 ### OS X Docker Setup Instructions
 
+When installing Docker on OS X, make sure you read the installation instructions.
+
 1. Install [Git](https://desktop.github.com/)
 2. Install [CCMenu](http://ccmenu.org/)
 3. Install [Docker](https://docs.docker.com/engine/installation/mac/)
