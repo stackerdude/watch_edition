@@ -14,32 +14,33 @@ client/src/templates/pages/menu.hbs
 
 ## MenuPage.spec.js
 ```javascript
-'use strict';
+const MenuPage = require('../../src/js/pages/menuPage');
+const App = require('../../src/js/app');
+const eventHub = require('watch_framework').EventHub;
 
-var MenuPage = require('../../src/js/pages/menuPage'), App = require('../../src/js/app'), eventHub = require('watch_framework').EventHub,
-  page;
+let page;
 
 window.App = App;
 
-describe("The Menu Page", function() {
+describe('The Menu Page', () => {
 
-  beforeEach(function() {
-    page = new MenuPage();
-  });
-
-  describe('menulist', function() {
-    it('should contain 5 items', function() {
-      page.render();
-      expect(page.collection.length).toEqual(5);
+    beforeEach(() => {
+        page = new MenuPage();
     });
-  });
 
-  describe('rendering', function() {
-    it('should produce the correct HTML', function() {
-      page.render();
-      expect(page.$el).toContainText("first option: up");
+    describe('menulist', () => {
+        it('should contain 5 items', () => {
+            page.render();
+            expect(page.collection.length).toEqual(5);
+        });
     });
-  });
+
+    describe('rendering', () => {
+        it('should produce the correct HTML', () => {
+            page.render();
+            expect(page.$el).toContainText("first option: up");
+        });
+    });
 
 });
 
