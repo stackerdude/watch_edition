@@ -49,12 +49,12 @@ describe("The Menu Page", function() {
 ## options.js
 
 ```javascript
-'use strict';
+const Option = require('../models/option');
+const Backbone = require('backbone');
 
-var Option = require('../models/option');
 
-var Options = Backbone.Collection.extend({
-  model: Option
+const Options = Backbone.Collection.extend({
+    model: Option,
 });
 
 module.exports = Options;
@@ -64,13 +64,13 @@ module.exports = Options;
 ## option.js
 
 ```javascript
-'use strict';
+const Backbone = require('backbone');
 
-var Option = Backbone.Model.extend({
-  defaults: {
-    direction: "up",
-    action: "click"
-  }
+const Option = Backbone.Model.extend({
+    defaults: {
+        direction: 'up',
+        action: 'click',
+    },
 });
 
 module.exports = Option;
@@ -79,44 +79,48 @@ module.exports = Option;
 ## homePage.js
 
 ```javascript
-'use strict';
+const Page = require('watch_framework').Page;
 
-var Page = require('watch_framework').Page;
+const template = require('../../templates/pages/home.hbs');
+const $ = require('jquery');
 
-var homePage;
-homePage = Page.extend({
+const homePage = Page.extend({
 
-  id: 'home',
+    id: 'home',
 
-  template: require('../../templates/pages/home.hbs'),
+    template,
 
-  buttonEvents: {
-    right: 'goToContacts',
-    top: 'scrollUp',
-    bottom: 'scrollDown',
-    face: 'goToMenuPage'
-  },
+    buttonEvents: {
+        right: 'goToContacts',
+        top: 'scrollUp',
+        bottom: 'scrollDown',
+        face: 'goToMenuPage',
+    },
 
-  goToContacts: function () {
-    window.App.navigate('contacts');
-  },
+    goToContacts() {
+        window.App.navigate('contacts');
+    },
 
-  scrollUp: function () {
-    $('#watch-face').animate({scrollTop: '-=70px'});
-  },
+    scrollUp() {
+        $('#watch-face').animate({
+            scrollTop: '-=70px'
+        });
+    },
 
-  scrollDown: function () {
-    $('#watch-face').animate({scrollTop: '+=70px'});
-  },
+    scrollDown() {
+        $('#watch-face').animate({
+            scrollTop: '+=70px'
+        });
+    },
 
-  goToMenuPage: function () {
-    window.App.navigate('menu');
-  },
+    goToMenuPage() {
+        window.App.navigate('menu');
+    },
 
-  render: function () {
-    this.$el.html(this.template());
-    return this;
-  }
+    render() {
+        this.$el.html(this.template());
+        return this;
+    },
 
 });
 
@@ -141,69 +145,64 @@ module.exports = {
 ## menuPage.js
 
 ```javascript
-'use strict';
+const Menu = require('watch_framework').Menu;
+const OptionsCollection = require('../collections/options');
+const template = require('../../templates/pages/menu.hbs');
 
-var Menu = require('watch_framework').Menu;
-var OptionsCollection = require('../collections/options');
+let menuList;
 
-var menuList;
+const menuPage = Menu.extend({
 
-var menuPage = Menu.extend({
+    id: 'menu',
 
-  id: 'menu',
+    template,
 
-  template: require('../../templates/pages/menu.hbs'),
+    initialize() {
+        this.collection = new OptionsCollection();
+    },
 
-  initialize: function() {
-    this.collection = new OptionsCollection;
-  },
+    render() {
+        menuList = this.collection;
+        menuList.add([{
+                direction: 'up',
+                action: 'first option',
+            },
+            {
+                direction: 'down',
+                action: 'second option',
+            },
+            {
+                direction: 'left',
+                action: 'third option',
+            },
+            {
+                direction: 'right',
+                action: 'fourth option',
+            },
+            {
+                direction: 'screen',
+                action: 'fifth option',
+            },
+        ]);
 
-  render: function() {
+        const directions = menuList.pluck('direction');
+        const actions = menuList.pluck('action');
 
-    menuList = this.collection;
-    menuList.add([
-      {
-        direction: "up",
-        action: "first option"
-      },
-      {
-        direction: "down",
-        action: "second option"
-      },
-      {
-        direction: "left",
-        action: "third option"
-      },
-      {
-        direction: "right",
-        action: "fourth option"
-      },
-      {
-        direction: "screen",
-        action: "fifth option"
-      }
-    ]);
+        this.$el.html(this.template({
+            option1: actions[0],
+            option2: actions[1],
+            option3: actions[2],
+            option4: actions[3],
+            option5: actions[4],
+            value1: directions[0],
+            value2: directions[1],
+            value3: directions[2],
+            value4: directions[3],
+            value5: directions[4],
+        }, ));
 
-    var directions = menuList.pluck("direction");
-    var actions = menuList.pluck("action");
-
-    this.$el.html(this.template(
-      {
-        option1: actions[0],
-        option2: actions[1],
-        option3: actions[2],
-        option4: actions[3],
-        option5: actions[4],
-        value1: directions[0],
-        value2: directions[1],
-        value3: directions[2],
-        value4: directions[3],
-        value5: directions[4]
-      }
-    ));
-
-    return this;
-  }
+        return this;
+    },
 });
 
 module.exports = menuPage;
