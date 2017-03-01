@@ -130,17 +130,24 @@ module.exports = homePage;
 ## index.js
 
 ```javascript
-'use strict';
+const page404 = require('./404Page');
+const team = require('./teamPage');
+const home = require('./homePage');
+const contacts = require('./contactsPage');
+const eventsList = require('./eventsList');
+const eventDetails = require('./eventDetails');
+const menu = require('./menuPage');
 
 module.exports = {
-  404: require('./404Page'),
-  team: require('./teamPage'),
-  home: require('./homePage'),
-  contacts: require('./contactsPage'),
-  eventsList: require('./eventsList'),
-  eventDetails: require('./eventDetails'),
-  menu: require('./menuPage')
+  404: page404,
+  team,
+  home,
+  contacts,
+  eventsList,
+  eventDetails,
+  menu,
 };
+
 ```
 
 ## menuPage.js
