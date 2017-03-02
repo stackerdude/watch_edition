@@ -12,12 +12,12 @@ When the user clicks one of the buttons, top, bottom, left, right, or face the c
         right: 'goRight'
       },
 
-      select: function () { // ... },
+      select() { // ... },
 
-      goUp: function () { // ... },
+      goUp() { // ... },
 
-      goDown: function () { // ... },
+      goDown() { // ... },
 
-      goLeft: function () { // ... },
+      goLeft() { // ... },
 
-      goRight: function () { // ... }
+      goRight() { // ... },
