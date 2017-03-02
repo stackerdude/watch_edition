@@ -66,12 +66,11 @@ First create a new file called `demoPage.js` inside `client/src/js/pages`
 
 Your new page will be based on the generic pageView so you need to add the following line
 ```javascript
-'use strict';
+const Page = require('watch_framework').Page;
 
-var Page = require('watch_framework').Page;
-var demoPage = Page.extend({
+const demoPage = Page.extend({
 
-    id: 'demo'
+  id: 'demo',
 
 });
 
@@ -83,10 +82,12 @@ The ID attribute is used in a few different ways, the most important thing is to
 
 Now in `client/src/js/pages/index.js` you need to add your page to the exports:
 ```javascript
+const demo = require('./demoPage');
+
 module.exports = {
     // existing content...
-    demo: require('./demoPage')
-}
+    demo,
+};
 ```
 ## Check it out
 Now go to your app's home page and click on the left button.
@@ -103,23 +104,20 @@ In the `client/spec/pages` folder, create a new file called `demoPage.spec.js`.
 
 Add the following test.
 ```javascript
-'use strict';
+const DemoPage = require('../../src/js/pages/demoPage');
+let page;
 
-var DemoPage = require('../../src/js/pages/demoPage'),
-    page;
+describe('The Demo Page', () => {
+  beforeEach(() => {
+    page = new DemoPage();
+  });
 
-describe('The Demo Page', function() {
-    
-    beforeEach(function() {
-        page = new DemoPage();
+  describe('rendering', () => {
+    it('should produce the correct HTML', () => {
+      page.render();
+      expect(page.$el).toContainText('This is a demo');
     });
-    
-    describe('rendering', function() {
-        it('should produce the correct HTML', function() {
-            page.render();
-            expect(page.$el).toContainText('This is a demo');
-        });
-    });
+  });
 });
 
 ```
@@ -142,10 +140,10 @@ In order to display some content you'll need to add render method.
 
 We want the page to display the text "This is a demo" so we will do the following to the render() function in demoPage.js:
 ```javascript
-render: function() {
+render() {
     this.$el.html("This is a demo");
     return this;
-}
+},
 ```
 It's best to put your render method towards the end of the file to keep things readable.
 
@@ -168,9 +166,9 @@ We're going to use a template to display the following HTML:
 ```
 Go back to `demoPage.spec.js` and edit our previous test so it reads:
 ```javascript
-describe('rendering', function() {
+describe('rendering',() => {
 
-  it('should produce the correct HTML', function() {
+  it('should produce the correct HTML', () => {
     page.render();
 
     expect(page.$el).toContainText('This is a demo');
@@ -192,7 +190,15 @@ TOTAL: 1 FAILED, 33 SUCCESS
 
 Add a template attribute to your page object, to keep things readable keep it near the ID attribute. It should look like this:
 ```javascript
-template: require('../../templates/pages/demo.hbs')
+const template = require('../../templates/pages/demo.hbs');
+
+const demoPage = Page.extend({
+
+  id: 'demo',
+
+  template,
+
+});
 ```
 Now it's time to add your template. In `client/src/templates/pages` make a file called `demo.hbs` with the the following content:
 ```html
@@ -202,7 +208,7 @@ Now it's time to add your template. In `client/src/templates/pages` make a file 
 
 The last thing to do is update your render method to return the template contents instead of a string:
 ```javascript
-render: function() {
+render() {
     this.$el.html(this.template());
     return this;
 }
@@ -217,7 +223,7 @@ The best thing about templates is you can pass data to them, this is allows you 
 
 In `demoPage.spec.js` add a new test:
 ```javascript
-    it('should pass a variable to the template', function() {
+    it('should pass a variable to the template', () => {
 
       page.render();
       expect(page.$el).toContainHtml('<h2>Welcome, John Smith!</h2>');
@@ -228,7 +234,7 @@ Run the tests and watch them fail.
 
 Change the render method in `client/src/js/pages/demoPage.js` to look like this:
 ```javascript
-render: function() {
+render() {
     this.$el.html(this.template({name: 'John Smith'}));
     return this;
 }
