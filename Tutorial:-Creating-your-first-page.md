@@ -9,7 +9,7 @@ buttonEvents: {
     right: 'goToContacts',
     top: 'scrollUp',
     bottom: 'scrollDown',
-    left: 'goToMyDemoPage'
+    left: 'goToMyDemoPage',
 }
 
 ```
@@ -29,8 +29,8 @@ Open `client/spec/pages/homePage.spec.js`
 
 Add the following test:
 ```javascript
-describe('left', function () {
-    it('should take the user to the demo page', function () {
+describe('left', () => {
+    it('should take the user to the demo page', () => {
         spyOn(window.App, 'navigate');
         page.configureButtons();
         eventHub.trigger('left');
@@ -53,7 +53,7 @@ TOTAL: 1 FAILED, 32 SUCCESS
 
 In the file `homePage.js` add the following method:
 ```javascript
-goToMyDemoPage: function() {
+goToMyDemoPage() {
     window.App.navigate('demo');
 },
 ```
