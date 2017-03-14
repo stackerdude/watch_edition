@@ -14,7 +14,7 @@ This will run the pre-commit checks - something should fail.
 6. Run the pre-commit checks again – everything should pass. ```./go pre-commit```
 7. Set your commit message to ```"[TASK][your_name/pairs_name] check-in dance initial commit"``` replacing ```your_name``` with, you guessed it, your name.
 8. Git pull to get the latest changes ```git pull --rebase```
-9. ```git pre-commit```
+9. ```./go pre-commit```
 10. Push your changes ```git push```
 11. Repeat for the other person in your pair.
 
