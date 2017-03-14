@@ -7,7 +7,7 @@ It's up to you how you install these. As long as they work correctly it doesn't 
 ### Windows Setup Instructions
 
 1. Install [Git](https://git-scm.com/downloads)
-2. Install [Node](https://nodejs.org/download/)
+2. Install [Node](https://nodejs.org/en/)
 3. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html)
 4. Git clone your teams repo
 
