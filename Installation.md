@@ -25,7 +25,7 @@ You should now be able to view the demo Proto Watch app in your browser at [http
 
 This article will help you get Node and NPM installed using Homebrew (our preferred way of installing dev tools on OS X)
 
-1. Install [Git](https://desktop.github.com/)
+1. Install [Git](https://git-scm.com/downloads)
 2. [Installing Node.js and npm using Homebrew on OS X](https://thechangelog.com/install-node-js-with-homebrew-on-os-x/)
 3. Install [CCMenu](http://ccmenu.org/)
 4. Git clone your teams repo
@@ -43,7 +43,7 @@ The script should run your initial setup, then start your app. You should now be
 
 When installing Docker on OS X, make sure you read the installation instructions.
 
-1. Install [Git](https://desktop.github.com/)
+1. Install [Git](https://git-scm.com/downloads)
 2. Install [CCMenu](http://ccmenu.org/)
 3. Install [Docker](https://docs.docker.com/engine/installation/mac/)
 4. Git clone your teams repo
@@ -61,7 +61,7 @@ You should now be able to view the demo Proto Watch app in your browser at [http
 
 When installing Docker on Windows, make sure you read the installation instructions.
 
-1. Install [Git](https://desktop.github.com/)
+1. Install [Git](https://git-scm.com/downloads)
 2. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html) 
 3. Install [Docker](https://docs.docker.com/engine/installation/windows/)
 4. Git clone your teams repo
