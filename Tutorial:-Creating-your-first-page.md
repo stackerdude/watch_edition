@@ -141,7 +141,7 @@ In order to display some content you'll need to add render method.
 We want the page to display the text "This is a demo" so we will do the following to the render() function in demoPage.js:
 ```javascript
 render() {
-    this.$el.html("This is a demo");
+    this.$el.html('This is a demo');
     return this;
 },
 ```
