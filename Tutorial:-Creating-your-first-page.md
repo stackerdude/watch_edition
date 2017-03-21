@@ -166,16 +166,16 @@ We're going to use a template to display the following HTML:
 ```
 Go back to `demoPage.spec.js` and edit our previous test so it reads:
 ```javascript
-describe('rendering',() => {
 
+describe('rendering', () => {
   it('should produce the correct HTML', () => {
     page.render();
 
     expect(page.$el).toContainText('This is a demo');
     expect(page.$el).toContainHtml('<p>What a great page!</p>');
-
   });
 });
+
 ```
 Run the tests. Our new test should fail something like this:
 ```bash
@@ -223,12 +223,11 @@ The best thing about templates is you can pass data to them, this is allows you 
 
 In `demoPage.spec.js` add a new test:
 ```javascript
-    it('should pass a variable to the template', () => {
-      page.render();
+it('should pass a variable to the template', () => {
+  page.render();
 
-      expect(page.$el).toContainHtml('<h2>Welcome, John Smith!</h2>');
-
-    });
+  expect(page.$el).toContainHtml('<h2>Welcome, John Smith!</h2>');
+});
 ```
 Run the tests and watch them fail.
 
