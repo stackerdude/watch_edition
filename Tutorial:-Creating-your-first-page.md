@@ -29,14 +29,14 @@ Open `client/spec/pages/homePage.spec.js`
 
 Add the following test:
 ```javascript
-describe('left', () => {
+  describe('left', () => {
     it('should take the user to the demo page', () => {
-        spyOn(window.App, 'navigate');
-        page.configureButtons();
-        eventHub.trigger('left');
-        expect(window.App.navigate).toHaveBeenCalledWith('demo');
+      spyOn(window.App, 'navigate');
+      page.configureButtons();
+      eventHub.trigger('left');
+      expect(window.App.navigate).toHaveBeenCalledWith('demo');
     });
-});
+  });
 ```
 Run the tests with `./go test`
 
@@ -53,9 +53,9 @@ TOTAL: 1 FAILED, 32 SUCCESS
 
 In the file `homePage.js` add the following method:
 ```javascript
-goToMyDemoPage() {
+  goToMyDemoPage() {
     window.App.navigate('demo');
-},
+  },
 ```
 Run the tests again. They should now pass.
 
