@@ -105,6 +105,7 @@ In the `client/spec/pages` folder, create a new file called `demoPage.spec.js`.
 Add the following test.
 ```javascript
 const DemoPage = require('../../src/js/pages/demoPage');
+
 let page;
 
 describe('The Demo Page', () => {
@@ -119,7 +120,6 @@ describe('The Demo Page', () => {
     });
   });
 });
-
 ```
 Run all the tests by entering the command:
 
