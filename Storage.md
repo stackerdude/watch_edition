@@ -16,6 +16,6 @@
 
 4. Open the view or file you wish to access the data from
 
-5. Require the storage module `var storage = require('../../storage');` (path may vary slightly)
+5. Require the storage module `const storage = require('../../storage');` (path may vary slightly)
 
 6. Access the data `var foo = storage.myData.foo;`
