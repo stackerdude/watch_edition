@@ -1,4 +1,6 @@
-# Loading JSON files
+**Note!** Data saved into the storage module is not saved to disk. Any information you add to the storage after the app has started will be lost when you close the browser window.
+
+# Loading JSON files in to the storage module
 
 1. Open `client/src/storage/index.js`
 
@@ -18,4 +20,4 @@
 
 5. Require the storage module `const storage = require('../../storage');` (path may vary slightly)
 
-6. Access the data `var foo = storage.myData.foo;`
+6. Access the data `const foo = storage.myData.foo;`
