@@ -4,7 +4,7 @@
 
 1. Open `client/src/storage/index.js`
 
-2. Require your JSON file `var myData = require("json!./my_data.json");`
+2. Require your JSON file `const myData = require("json!./my_data.json");`
 
 3. Modify the Storage function to assign your JSON to a suitable property
 
