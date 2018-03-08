@@ -1,27 +1,16 @@
 For the purpose of this exercise we'll create a new page called "Demo".
 
-## Create a new link on your home page
-
-Go to `client/src/js/pages` and edit the file called `homePage.js`.
-
-```
-buttonEvents: {
-    right: 'goToContacts',
-    top: 'scrollUp',
-    bottom: 'scrollDown',
-    left: 'goToMyDemoPage',
-}
-
-```
 ## Test Driven Development
 
 The principles of Test Driven Development are straightforward:
 
 * Write a failing test
 * Write just enough code to make the test pass
+  * YAGNI - You Ain't Going To Need It
 * Refactor
 * Write the next failing test
 * Rinse and repeat
+
 
 ### Write a failing test
 
@@ -29,66 +18,104 @@ Open `client/spec/pages/homePage.spec.js`
 
 Add the following test:
 ```javascript
-  describe('left', () => {
-    it('should take the user to the demo page', () => {
-      spyOn(window.App, 'navigate');
-      page.configureButtons();
-      eventHub.trigger('left');
-      expect(window.App.navigate).toHaveBeenCalledWith('demo');
-    });
+
+describe('#leftButtonEvent', () => {
+  it('should take the user to the demo page', () => {
+    const props = {
+      navigate: () => { },
+    };
+
+    const page = new HomePage(props);
+    spyOn(page, 'navigate');
+
+    page.leftButtonEvent();
+    expect(page.navigate).toHaveBeenCalledWith('demo');
   });
+});
+
 ```
 Run the tests with `./go test`
 
 This test should fail along lines similar to the the following:
 ```bash
-PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 33 of 35 (1 FAILED) (skipped 2) (0.054 secs / 0.035 secs)
-TOTAL: 1 FAILED, 32 SUCCESS
 
-1) should take to my demo page
-     The Home Page button event handlers left
-     Expected spy navigate to have been called with [ 'demo'  ] but it was never called.
+FAIL  client/spec/pages/homePage.spec.js
+  ● HomePage › #leftButtonEvent › goes to demo page
+
+    expect(spy).toHaveBeenCalledWith(expected)
+
+    Expected spy to have been called with:
+      ["demo"]
+    But it was not called.
+
+      at Object.<anonymous> (client/spec/pages/homePage.spec.js:58:29)
+          at new Promise (<anonymous>)
+          at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:160:7)
+
 ```
-## So let's create the method...
 
-In the file `homePage.js` add the following method:
+##Get the test to pass
+
+To get this test passing we need to ensure that when a leftButtonEvent from the homepage occurs that navigate is being called with ‘demo’.
+
+The first step is to add the leftButtonEvent() function in the homePage.js file, that parses ‘demo’.
+
 ```javascript
-  goToMyDemoPage() {
-    window.App.navigate('demo');
-  },
+  leftButtonEvent() {
+    this.navigate('demo');
+  }
 ```
-Run the tests again. They should now pass.
+This gives the left button from the home page some logic and will make our test pass.
 
-## A common starting point
+##Create the page
+
 Almost every page starts the same way.
 
 First create a new file called `demoPage.js` inside `client/src/js/pages`
 
-Your new page will be based on the generic pageView so you need to add the following line
+The new page will be extending the basePage.js so we will need to require that at the top, and then use extend it in the class declaration.
+
 ```javascript
-const Page = require('watch_framework').Page;
 
-const demoPage = Page.extend({
+  const BasePage = require('./BasePage');
 
-  id: 'demo',
+  class DemoPage extends BasePage {
+  template() {
+    return `
+      return `hello demoPage`;
+    `;
+  }
+  }
 
-});
+  module.exports = DemoPage;
 
-module.exports = demoPage;
 ```
-This is the starting point for every new page. Here you're creating a new type of view which extends the default page and you are giving it a custom ID (in this case, the ID is 'demo'). 
 
-The ID attribute is used in a few different ways, the most important thing is to make sure that all your pages have a unique ID attribute, and that the page name and the ID name match.
+##Link the page
 
-Now in `client/src/js/pages/index.js` you need to add your page to the exports:
+All of our pages require a template which allow us to return html content to display.
+
+This is the starting point for every new page. We’re creating a new type of view which extends the base page we then append the module.exports = DemoPage; to be able to access this classes return content outside of this file.
+
+So we have our page and our leftButtonEvent() is trying to navigate to our demo page, to link these together we need to require our demoPage in our routes file.
+
 ```javascript
-const demo = require('./demoPage');
+const HomePage = require('./pages/homePage');
+const ContactsPage = require('./pages/ContactsPage/');
+const TeamPage = require('./pages/teamPage');
+const FourOhFour = require('./pages/404Page');
+const DemoPage = require('./pages/demoPage');
 
 module.exports = {
-    // existing content...
-    demo,
+ '/': HomePage,
+ 'contacts': ContactsPage,
+ 'team': TeamPage,
+ '404': FourOhFour,
+ 'demo': DemoPage
 };
 ```
+
 ## Check it out
 Now go to your app's home page and click on the left button.
 
@@ -96,7 +123,9 @@ You should arrive at a new page. But there is no content.
 
 Let's fix that now.
 
-## First, write the test
+##Lets create some content!
+
+##...first, write the test
 
 We want our Demo page to contain the text "This is a demo", so we're going to start by writing a test for that.
 
@@ -244,4 +273,3 @@ Change the contents of the template to look like this:
 <h2>Welcome, {{name}}!</h2>
 <p>What a great page!</p>
 ```
-
