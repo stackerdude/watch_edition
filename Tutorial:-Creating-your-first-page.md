@@ -55,7 +55,7 @@ FAIL  client/spec/pages/homePage.spec.js
 
 ```
 
-##Get the test to pass
+## Get the test to pass
 
 To get this test passing we need to ensure that when a leftButtonEvent from the homepage occurs that navigate is being called with ‘demo’.
 
@@ -92,7 +92,7 @@ The new page will be extending the basePage.js so we will need to require that a
 
 ```
 
-##Link the page
+## Link the page
 
 All of our pages require a template which allow us to return html content to display.
 
@@ -123,9 +123,9 @@ You should arrive at a new page. But there is no content.
 
 Let's fix that now.
 
-##Lets create some content!
+## Lets create some content!
 
-##...first, write the test
+## ...first, write the test
 
 We want our Demo page to contain the text "This is a demo", so we're going to start by writing a test for that.
 
