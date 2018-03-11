@@ -125,7 +125,7 @@ Let's fix that now.
 
 ## Lets create some content!
 
-## ...first, write the test
+### ...first, write the test
 
 We want our Demo page to contain the text "This is a demo", so we're going to start by writing a test for that.
 
