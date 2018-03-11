@@ -92,7 +92,7 @@ The new page will be extending the basePage.js so we will need to require that a
 
 ```
 
-## Link the page
+### Link the page
 
 All of our pages require a template which allow us to return html content to display.
 
