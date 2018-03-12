@@ -1,4 +1,4 @@
-You can specify the behaviour of each button on the watch when the page is active (visible to the user) by implementing (overriding them from the basePage) the functions below.
+You can specify the behaviour of each button on the watch when the page is active (visible to the user) by implementing the functions below. This is essentially overriding them from the basePage.js.
 
 When the user clicks one of the buttons, top, bottom, left, right, or face the corresponding method will be called.
 
