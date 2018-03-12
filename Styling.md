@@ -2,11 +2,11 @@
 
 You can create styles which will apply to any page.
 
-1. Open `client/src/app.scss`
+1. Open `client/src/styles/app.scss`
 
 2. To give all pages a red background by default add the following code
 
-        .page {
+        #watch {
             background-color: red;
         }
 
