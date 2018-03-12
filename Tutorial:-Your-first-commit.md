@@ -11,7 +11,7 @@ Everyone on the team should complete this exercise as soon as they have access t
 This will run the pre-commit checks - something should fail.
 5. Fix the failing test by adding your name and your pairs name to the team page in ```teamPage.js```
 6. Run the tests again – everything should pass. ```./go test```
-7. Set your commit message to ```"[TASK][Hugh/Katie] Initial commit"``` replacing ```your_name``` with, you guessed it, your name.
+7. Set your commit message to ```"[TASK][Bruce/Sheila] Initial commit"``` replacing ```your_name``` with, you guessed it, your name.
 8. Git pull to get the latest changes ```git pull --rebase```
 9. ```./go pre-commit```
 10. Push your changes ```git push```
