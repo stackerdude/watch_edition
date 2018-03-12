@@ -1,23 +1,26 @@
-A View With Buttons provides has a buttonEvents property which allows you to specify the behaviour of each button on the watch when the page is active (visible to the user).
+You can specify the behaviour of each button on the watch when the page is active (visible to the user) by implementing (overriding them from the basePage) the functions below.
 
 When the user clicks one of the buttons, top, bottom, left, right, or face the corresponding method will be called.
 
-## Example
+```javascript
+  rightButtonEvent() {
+  }
 
-      buttonEvents: {
-        face: 'select',
-        top: 'goUp',
-        bottom: 'goDown',
-        left: 'goLeft',
-        right: 'goRight'
-      },
+  leftButtonEvent() {
+  }
 
-      select() { // ... },
+  topButtonEvent() {
+  }
 
-      goUp() { // ... },
+  bottomButtonEvent() {
+  }
 
-      goDown() { // ... },
-
-      goLeft() { // ... },
-
-      goRight() { // ... },
+  faceButtonEvent() {
+  }
+```
+for example the leftButtonEvent() is overridden on the client/src/js/pages/ContactsPage/index.js
+```javascript
+  leftButtonEvent() {
+    this.navigate('/');
+  }
+```
