@@ -68,7 +68,7 @@ The first step is to add the leftButtonEvent() function in the homePage.js file,
 ```
 This gives the left button from the home page some logic and will make our test pass.
 
-##Create the page
+## Create the page
 
 Almost every page starts the same way.
 
@@ -145,7 +145,7 @@ describe('The Demo Page', () => {
   describe('rendering', () => {
     it('should produce the correct HTML', () => {
       page.render();
-      expect(page.$el).toContainText('This is a demo');
+      expect(page.$el).toContainText('Hello, i am the demopage');
     });
   });
 });
@@ -156,27 +156,35 @@ Run all the tests by entering the command:
 
 We expect our new test to fail along lines something like this:
 ```bash
-PhantomJS 2.1.1 (Mac OS X 0.0.0): Executed 34 of 36 (1 FAILED) (skipped 2) (0.043 secs / 0.037 secs)
-TOTAL: 1 FAILED, 33 SUCCESS
+FAIL  client/spec/pages/demoPage.spec.js
+  ● The Demo Page › rendering › should produce the correct HTML
 
-1) should produce the correct HTML
-     The Demo Page rendering
-     Expected ({ 0: HTMLNode, context: HTMLNode, length: 1 }) to contain text 'This is a demo'.
+    expect(string).toContain(value)
+
+    Expected string:
+      "hello demoPage"
+    To contain value:
+      "Hello, i am the demopage"
+
+      at Object.<anonymous> (client/spec/pages/demoPage.spec.js:9:31)
+          at new Promise (<anonymous>)
+          at <anonymous>
+      at process._tickCallback (internal/process/next_tick.js:160:7)
+
 ```
 ## Adding some content
 
-In order to display some content you'll need to add render method.
+In order to display some content you'll need to add template method.
 
-We want the page to display the text "This is a demo" so we will do the following to the render() function in demoPage.js:
+We want the page to display the text "Hello, i am the demopage" so we will do the following to the template() function in demoPage.js:
+
 ```javascript
-render() {
-    this.$el.html('This is a demo');
-    return this;
-},
+template() {
+  return `Hello, i am the demopage`;
+}
 ```
-It's best to put your render method towards the end of the file to keep things readable.
 
-Now click on the left button again (or refresh the page) - and you should see your text 'demo page'.
+Now click on the left button again (or refresh the page) - and you should see your text 'Hello, i am the demopage'.
 
 Run the tests again.
 
@@ -184,7 +192,7 @@ This time, they should pass.
 
 ## Using templates
 
-Returning strings in your render method gets messy quickly, especially once you start adding more content and using HTML tags.
+Returning strings in your template method gets messy quickly, especially once you start adding more content and using HTML tags.
 
 ### First write a test
 
