@@ -6,4 +6,4 @@ You should only need to work on files inside the ```client/``` directory if you 
 
 - [Node.js](https://nodejs.org/en/) - Node.js
 - [SCSS](http://sass-lang.com/) - CSS Styling
-- [Jest] (https://facebook.github.io/jest/) - Testing Framework
+- [Jest](https://facebook.github.io/jest/) - Testing Framework
