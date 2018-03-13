@@ -5,5 +5,4 @@ During the project you'll mostly be working with JavaScript.
 You should only need to work on files inside the ```client/``` directory if you are building a watch app.
 
 - [Node.js](https://nodejs.org/en/) - Node.js
-- [Handlebars](http://handlebarsjs.com/) - HTML Templating
 - [SCSS](http://sass-lang.com/) - CSS Styling
