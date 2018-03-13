@@ -1,4 +1,4 @@
-### [tryGit](https://try.github.io)
+### [Git](https://try.github.io)
 TryGit is interactive online tutorial for learning the Git version control system.
 
 ### [JavaScript](http://eloquentjavascript.net/)
