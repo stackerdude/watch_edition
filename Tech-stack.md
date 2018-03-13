@@ -7,3 +7,6 @@ You should only need to work on files inside the ```client/``` directory if you 
 - [Node.js](https://nodejs.org/en/) - Node.js
 - [SCSS](http://sass-lang.com/) - CSS Styling
 - [Jest](https://facebook.github.io/jest/) - Testing Framework
+- [JQuery](https://jquery.com/) - JavaScript Library
+- [webpack)[https://webpack.js.org/] - Module bundler
+- [CircleCI](https://circleci.com/) - Continuous Integration and Delivery
