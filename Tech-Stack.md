@@ -8,5 +8,10 @@ You should only need to work on files inside the ```client/``` directory if you 
 - [SCSS](http://sass-lang.com/) - CSS Styling
 - [Jest](https://facebook.github.io/jest/) - Testing Framework
 - [JQuery](https://jquery.com/) - JavaScript Library
+
+
+These are the infrastructure tools used to automate various tasks in your development environment and deploy automatically to the Heroku staging environment.
+
 - [webpack](https://webpack.js.org/) - Module bundler
 - [CircleCI](https://circleci.com/) - Continuous Integration and Delivery
+- [Heroku](https://www.heroku.com/) - Staging environment
