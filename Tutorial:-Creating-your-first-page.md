@@ -16,7 +16,7 @@ The principles of Test Driven Development are straightforward:
 
 Open `client/spec/pages/homePage.spec.js`
 
-Add the following test:
+Add the following test above the test for `#rightButtonEvent`:
 ```javascript
 
 describe('#leftButtonEvent', () => {
