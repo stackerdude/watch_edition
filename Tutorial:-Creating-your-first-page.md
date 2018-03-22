@@ -98,7 +98,7 @@ Which imports the page and allow access to the functions within.
 
 ### Link the page
 
-So we have our new page demoPage.js and we have our leftButtonEvent() in homePage.js which is trying to navigate there, to link these together we need to require our demoPage in our routes file.
+So we have our new page demoPage.js and we have our leftButtonEvent() in homePage.js which is trying to navigate there, to link these together we need to require our demoPage in our `routes.js` file.
 
 ```javascript
 const HomePage = require('./pages/homePage');
