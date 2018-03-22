@@ -171,7 +171,7 @@ We want the page to display the text "This is a demo" so we will do the followin
 ```javascript
 template() {
     return `This is a demo.`;
-},
+}
 ```
 It's best to put your template function towards the end of the file to keep things readable.
 
