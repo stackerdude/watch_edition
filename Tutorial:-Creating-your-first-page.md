@@ -70,6 +70,45 @@ This gives the left button from the home page some logic and will make our test 
 
 ## Create the page
 
+### ...first, write the test
+
+We want our Demo page to contain the text "This is a demo", so we're going to start by writing a test for that.
+
+In the `client/spec/pages` folder, create a new file called `demoPage.spec.js`.
+
+Add the following test.
+```javascript
+const DemoPage = require('../../src/js/pages/demoPage');
+
+let page;
+
+describe('The Demo Page', () => {
+  beforeEach(() => {
+    page = new DemoPage();
+  });
+
+  describe('template', () => {
+    it('should contain the correct text', () => {
+      expect(page.template()).toContain('This is a demo');
+    });
+  });
+});
+
+```
+Check your test runner. If it is not running, you can start it by executing `./go test:dev`.
+
+We expect our new test to fail along lines something like this:
+```bash
+FAIL  client/spec/pages/demoPage.spec.js
+ ● The Demo Page › template › should contain the correct text
+
+   expect(collection)[.not].toContainEqual(value)
+
+   Expected collection to be an array-like structure.
+   Received: undefined
+
+```
+
 Almost every page starts the same way.
 
 First create a new file called `demoPage.js` inside `client/src/js/pages`
@@ -124,46 +163,6 @@ You should arrive at a new page. But it will show 'undefined' as the template fu
 Let's fix that now.
 
 ## Lets create some content!
-
-### ...first, write the test
-
-We want our Demo page to contain the text "This is a demo", so we're going to start by writing a test for that.
-
-In the `client/spec/pages` folder, create a new file called `demoPage.spec.js`.
-
-Add the following test.
-```javascript
-const DemoPage = require('../../src/js/pages/demoPage');
-
-let page;
-
-describe('The Demo Page', () => {
-  beforeEach(() => {
-    page = new DemoPage();
-  });
-
-  describe('template', () => {
-    it('should contain the correct text', () => {
-      expect(page.template()).toContain('This is a demo');
-    });
-  });
-});
-
-```
-Check your test runner. If it is not running, you can start it by executing `./go test:dev`.
-
-We expect our new test to fail along lines something like this:
-```bash
-FAIL  client/spec/pages/demoPage.spec.js
- ● The Demo Page › template › should contain the correct text
-
-   expect(collection)[.not].toContainEqual(value)
-
-   Expected collection to be an array-like structure.
-   Received: undefined
-
-```
-## Adding some content
 
 In order to display some content we will need the template function to return something.
 
