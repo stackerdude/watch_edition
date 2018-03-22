@@ -89,7 +89,7 @@ module.exports = DemoPage;
 ```
 All of our pages require a template function, which is why we have an empty placeholder. The return of this function is what the app looks to insert into the watch face html and allow it to be displayed.
 
-This is the starting point for every new page. We’re creating a new type of view which extends the base page, we then append the module.exports = DemoPage; this allows us to...
+This is the starting point for every new page. We’re creating a new type of view which extends the base page, we then append `module.exports = DemoPage;` to allow the page to be exported and used in other files
 
 ```javascript
 const DemoPage = require('./pages/demoPage');
