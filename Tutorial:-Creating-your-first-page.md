@@ -68,7 +68,7 @@ The first step is to add the leftButtonEvent() function in the homePage.js file,
 ```
 This gives the left button from the home page some logic and will make our test pass.
 
-##Create the page
+## Create the page
 
 Almost every page starts the same way.
 
