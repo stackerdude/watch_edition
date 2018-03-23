@@ -9,7 +9,7 @@ It's up to you how you install these. As long as they work correctly it doesn't 
 1. Install [Git](https://git-scm.com/downloads)
 2. Install [Node](https://nodejs.org/en/)
 3. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html)
-4. Git clone your teams repo
+4. Git clone your teams repo - further instructions on cloning a repository can be found [here](https://help.github.com/articles/cloning-a-repository/)
 
 **Now run the initial setup and start the app!**
 
@@ -28,7 +28,8 @@ This article will help you get Node and NPM installed using Homebrew (our prefer
 1. Install [Git](https://git-scm.com/downloads)
 2. [Installing Node.js and npm using Homebrew on OS X](https://thechangelog.com/install-node-js-with-homebrew-on-os-x/)
 3. Install [CCMenu](http://ccmenu.org/)
-4. Git clone your teams repo
+4. Git clone your teams repo - further instructions on cloning a repository can be found [here](https://help.github.com/articles/cloning-a-repository/)
+   
 
 **Now run the initial setup and start the app!**
 
