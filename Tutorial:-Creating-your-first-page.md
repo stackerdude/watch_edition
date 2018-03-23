@@ -117,7 +117,7 @@ The new page will be extending the basePage.js so we will need to require that a
 
 ```javascript
 
-const BasePage = require('./BasePage');
+const BasePage = require('watch-framework').BasePage;
 
 class DemoPage extends BasePage {
   template() {}
