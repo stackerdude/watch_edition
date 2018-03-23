@@ -26,7 +26,7 @@ You should now be able to view the demo Proto Watch app in your browser at [http
 This article will help you get Node and NPM installed using Homebrew (our preferred way of installing dev tools on OS X)
 
 1. Install [Git](https://git-scm.com/downloads)
-2. [Installing Node.js and npm using Homebrew on OS X](https://thechangelog.com/install-node-js-with-homebrew-on-os-x/)
+2. [Installing Node.js and npm using Homebrew on OS X](https://changelog.com/posts/install-node-js-with-homebrew-on-os-x)
 3. Install [CCMenu](http://ccmenu.org/)
 4. Git clone your teams repo - further instructions on cloning a repository can be found [here](https://help.github.com/articles/cloning-a-repository/)
    
