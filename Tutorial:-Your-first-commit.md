@@ -3,7 +3,7 @@ Everyone on the team should complete this exercise as soon as they have access t
 ## Instructions
 
 1. Set up the project: [Installation Instructions](https://github.com/twlevelup/watch_edition/wiki/Installation)
-2. Git pull to get the latest code ```git pull --rebase```ask a trainer if you're not sure what ```--rebase``` does
+2. Git pull to get the latest code ```git pull --rebase```read [this](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) if you're not sure what ```--rebase``` does
 3. In the `client/spec/pages` folder, create a new file called `teamPage.spec.js`.
 4. Add the following test that checks for your name in the team page 
 ```javascript
