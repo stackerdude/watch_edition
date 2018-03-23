@@ -1,4 +1,7 @@
-You'll likely run into some merge conflicts when you git --rebase ... Don't freak out!
+We'll inevitably run into some merge conflicts when you git rebase ... Don't freak out!
 
+[Some background on merges](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging#_basic_merging)
 
-Read [this](https://www.git-tower.com/learn/git/ebook/en/command-line/advanced-topics/rebase#start) it should give you some understanding into whats going on behind the scenes, just remember you can always go back! :D
+[What is rebasing!?](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+
+These should demystify how we integrate our code
