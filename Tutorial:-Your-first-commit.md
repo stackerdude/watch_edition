@@ -16,7 +16,7 @@ let page;
     it('should contain the correct text', () => {
 
       page = new TeamPage();
-      expect(page.template()).toContain('Bob');
+      expect(page.template()).toContain('Your name here!!', 'Your pairs name here!');
     });
   });
 
@@ -41,7 +41,14 @@ This will run the pre-commit checks - something should fail.
 ## Push your code 
 
 7. Run ```git add -p``` to add your changes. 
-8. Run ```git commit -m "[COMMIT MESSAGE]``` (Set your commit message to ```"[STORY NO/STORY DESCRIPTION][Bruce/Sheila] Initial commit"``` replacing ```[Bruce/Sheila]``` with, you guessed it, you and your pair's name.)
+8. Run ```git commit -m "[COMMIT MESSAGE]``` your commit message in the following format 
+
+- ```git commit -m "[name 1/name 2][#0] {verb here} {what your commit does here}" ```
+
+e.g. 
+
+- ```    git commit -m "[Bruce/Sheila][#0] Add names Bruce and Sheila to team page"```
+
 9. Git pull to get the latest changes ```git pull --rebase```
 10. ```./go pre-commit```
 11. Push your changes ```git push origin master```
