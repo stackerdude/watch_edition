@@ -5,18 +5,19 @@ Everyone on the team should complete this exercise as soon as they have access t
 1. Set up the project: [Installation Instructions](https://github.com/twlevelup/watch_edition/wiki/Installation)
 2. Git pull to get the latest code ```git pull --rebase```read [this](https://git-scm.com/book/en/v2/Git-Branching-Rebasing) if you're not sure what ```--rebase``` does
 3. In the `client/spec/pages` folder, there will be a file called `teamPage.spec.js`.
-4. Add the following test that checks for your name in the team page 
+4. Add a test that checks for your name in the describe tamplate tests. 
 ```javascript
 
-const TeamPage = require('../../src/js/pages/teamPage');
+  describe('#template', () => {
+    it('should have a template', () => {
+      const page = new TeamPage();
+      expect(page.template()).toContain("<h1>Made by:</h1>");
+    });
 
-let page;
-
-  describe('template', () => {
-    it('should contain the correct text', () => {
-
-      page = new TeamPage();
-      expect(page.template()).toContain('Your name here!!', 'Your pairs name here!');
+    it('should contain team members names', () => {
+      const page = new TeamPage();
+      expect(page.template()).toContain("Hugh");
+      expect(page.template()).toContain("Katie");
     });
   });
 
