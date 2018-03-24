@@ -142,7 +142,7 @@ So we have our new page demoPage.js and we have our leftButtonEvent() in homePag
 
 ```javascript
 const HomePage = require('./pages/homePage');
-const ContactsPage = require('./pages/ContactsPage/');
+const ContactsPage = require('./pages/ContactsPage');
 const TeamPage = require('./pages/teamPage');
 const FourOhFour = require('./pages/404Page');
 const DemoPage = require('./pages/demoPage');
