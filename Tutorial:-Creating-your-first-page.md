@@ -165,9 +165,9 @@ Let's fix that now.
 
 ## Lets create some content!
 
-In order to display some content we will need the template function to return something.
+In order to display some content we will need the template function to return some text.
 
-We want the page to display the text "This is a demo" so we will do the following to the template() function in demoPage.js:
+We want the page to display "This is a demo" so we need the template() function to return a string:
 ```javascript
 template() {
     return `This is a demo.`;
@@ -175,13 +175,13 @@ template() {
 ```
 It's best to put your template function towards the end of the file to keep things readable.
 
-Now click on the left button again (or refresh the page) - and you should see your text 'This is a demo'.
+Now if we run our app (./go start) and click on the left button (or refresh the page) - and you should see your text 'This is a demo'.
 
-Run the tests again.
+Now the tests should be passing because the content matches 👍 
 
-This time, they should pass.
+This is enough for the purpose of making the test pass, however, we are using handlebars throughout the application, this allows us to return HTML to the browser with a javascript function while simultaneously keeping the HTML and JavaScript separate. 
 
-This is enough for the purpose of making the test pass, however, we are using Handlebars throughout the application, this allows us to return HTML to the browser while simultaneously keeping the HTML and JavaScript separate. If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
+If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
 
 ## Handlebars!
 So let's use handlebars... First let's refactor our test to:
@@ -203,7 +203,7 @@ Add the following to the demoPage.hbs
 <p>This is a demo using handlebars</p>
 ```
 
-Now we need to import (require) our hbs file in the demoPage.js and have our template function return the hbs content, the demoPage.js should look like this
+Now we need to require (import) our hbs file in the demoPage.js and have our template function return the hbs content, to do this we need our demoPage.js to look like the following.
 
 ```
 const BasePage = require('watch-framework').BasePage;
@@ -218,4 +218,4 @@ class DemoPage extends BasePage {
 module.exports = DemoPage;
 ```
 
-And the tests should pass 💇‍♂️ 
+And the tests should pass 💯 🥇 👯‍♂️ 👯 🍡 
