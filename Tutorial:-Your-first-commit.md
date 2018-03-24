@@ -16,8 +16,8 @@ Everyone on the team should complete this exercise as soon as they have access t
 
     it('should contain team members names', () => {
       const page = new TeamPage();
-      expect(page.template()).toContain("Hugh");
-      expect(page.template()).toContain("Katie");
+      expect(page.template()).toContain("Sheila");
+      expect(page.template()).toContain("Bruce");
     });
   });
 
