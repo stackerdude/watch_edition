@@ -218,4 +218,4 @@ class DemoPage extends BasePage {
 module.exports = DemoPage;
 ```
 
-And the tests should pass 💯 🥇 👯‍♂️ 👯 🍡 
+And the tests should pass 💯 🥇 👯 🍡 
