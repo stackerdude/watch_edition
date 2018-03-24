@@ -99,14 +99,15 @@ Check your test runner. If it is not running, you can start it by executing `./g
 
 We expect our new test to fail along lines something like this:
 ```bash
-FAIL  client/spec/pages/demoPage.spec.js
- ● The Demo Page › template › should contain the correct text
+ FAIL  client/spec/pages/demoPage.spec.js
+  ● Test suite failed to run
 
-   expect(collection)[.not].toContainEqual(value)
+    Cannot find module '../../src/js/pages/demoPage' from 'demoPage.spec.js'
 
-   Expected collection to be an array-like structure.
-   Received: undefined
-
+    > 1 | const DemoPage = require('../../src/js/pages/demoPage');
+      2 | 
+      3 | let page;
+      4 | 
 ```
 
 Almost every page starts the same way.
