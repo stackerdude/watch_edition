@@ -180,3 +180,5 @@ Now click on the left button again (or refresh the page) - and you should see yo
 Run the tests again.
 
 This time, they should pass.
+
+This is enough for the purpose of making the test pass, however, we are using Handlebars throughout the application, this allows us to return HTML to the browser while simultaneously keeping the HTML and JavaScript separate. If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
