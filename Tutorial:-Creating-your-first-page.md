@@ -80,20 +80,20 @@ Add the following test.
 ```javascript
 const DemoPage = require('../../src/js/pages/demoPage');
 
-let page;
-
 describe('The Demo Page', () => {
+  let watchFace;
   beforeEach(() => {
-    page = new DemoPage();
+    document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
+    watchFace = document.getElementById('watch-face');
   });
 
-  describe('template', () => {
+  describe('#template', () => {
     it('should contain the correct text', () => {
+      const page = new DemoPage();
       expect(page.template()).toContain('This is a demo');
     });
   });
 });
-
 ```
 Check your test runner. If it is not running, you can start it by executing `./go test:dev`.
 
@@ -182,3 +182,40 @@ Run the tests again.
 This time, they should pass.
 
 This is enough for the purpose of making the test pass, however, we are using Handlebars throughout the application, this allows us to return HTML to the browser while simultaneously keeping the HTML and JavaScript separate. If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
+
+## Handlebars!
+So let's use handlebars... First let's refactor our test to:
+```
+  describe('#template', () => {
+    it('should contain the correct text', () => {
+      const page = new DemoPage();
+      expect(page.template()).toContain('This is a demo using handlebars');
+    });
+  });
+});
+```
+Check that our test is failing.
+
+Now create a demoPage.hbs in the client/src/templates folder.
+
+Add the following to the demoPage.hbs
+```
+<p>This is a demo using handlebars</p>
+```
+
+Now we need to import (require) our hbs file in the demoPage.js and have our template function return the hbs content, the demoPage.js should look like this
+
+```
+const BasePage = require('watch-framework').BasePage;
+const compiledTemplate = require('../../templates/demoPage.hbs')
+
+class DemoPage extends BasePage {
+  template() {
+    return compiledTemplate();
+  }
+}
+
+module.exports = DemoPage;
+```
+
+And the tests should pass 💇‍♂️ 
