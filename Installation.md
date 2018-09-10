@@ -35,6 +35,7 @@ This article will help you get Node and NPM installed using Homebrew (our prefer
 
 ```shell
 cd path_to_team_repo
+npm install
 ./go start
 ```
 
