@@ -1,4 +1,4 @@
-There are a number of pieces in the tech stack but many of them are just to provide automation and don't have to touched or understood in order to build Proto Watch apps.
+There are a number of pieces in the tech stack but many of them are just to provide automation and don't have to be touched or understood in order to build Proto Watch apps.
 
 During the project you'll mostly be working with JavaScript.
 
