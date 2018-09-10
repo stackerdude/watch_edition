@@ -127,7 +127,7 @@ class DemoPage extends BasePage {
 module.exports = DemoPage;
 
 ```
-All of our pages require a template function, which is why we have an empty placeholder. The return of this function is what the app looks to insert into the watch face html and allow it to be displayed.
+All of our pages either require a template function or a template property. This tutorial shows you how to design a page with a template function, but be aware the existing pages use a template property. The return of the template function is what the app looks to insert into the watch face html and allow it to be displayed. A side note, the content stored in the template property can be returned the same way, by calling the template function.
 
 This is the starting point for every new page. We’re creating a new type of view which extends the base page, we then append `module.exports = DemoPage;` to allow the page to be exported and used in other files
 
