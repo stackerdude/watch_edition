@@ -36,7 +36,7 @@ describe('#leftButtonEvent', () => {
 ```
 Run the tests with `./go test:dev`. This will continually run the tests as you make changes to your code.
 
-This test should fail along lines similar to the the following:
+This test should fail with an output similar to the following:
 ```bash
 
 FAIL  client/spec/pages/homePage.spec.js
