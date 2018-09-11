@@ -31,7 +31,7 @@ This will run the pre-commit checks - something should fail.
 
 ## Before you push
 
-1. Check the CI build (see below), do not pull unless it's is green!
+1. Check the CI build (see below), do not pull unless it's green!
 2. Run ```git pull --rebase```
 3. Fix any merge conflicts
 4. Run
