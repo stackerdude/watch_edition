@@ -112,6 +112,9 @@ We expect our new test to fail along lines something like this:
 
 Almost every page starts the same way.
 
+### ...now make the test pass
+#### create the javascript file
+
 First create a new file called `demoPage.js` inside `client/src/js/pages`
 
 The new page will be extending the basePage.js so we will need to require that at the top, and then use extend it in the class declaration.
@@ -121,20 +124,35 @@ The new page will be extending the basePage.js so we will need to require that a
 const BasePage = require('watch-framework').BasePage;
 
 class DemoPage extends BasePage {
-  template() {}
+  template = require('../../templates/demoPage.hbs');
 }
 
 module.exports = DemoPage;
 
 ```
-All of our pages either require a template function or a template property. This tutorial shows you how to design a page with a template function, but be aware the existing pages use a template property. The return of the template function is what the app looks to insert into the watch face html and allow it to be displayed. A side note, the content stored in the template property can be returned the same way, by calling the template function.
+
+#### ...now create the content file
+
+All of our pages require a template property that contains the imported handlebars file which holds html content. The content of the template file can be returned by calling the template method. 
+
+We will create the handlebars file we are importing in the demoPage.js. Create a new file called `demoPage.hbs` inside `client/src/templates` and add this line:
+
+```html
+<p>This is a demo</p>
+```
+
+To add content to a page, you must edit the handlebars file.
+
+If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
+
+#### final notes
 
 This is the starting point for every new page. We’re creating a new type of view which extends the base page, we then append `module.exports = DemoPage;` to allow the page to be exported and used in other files
 
 ```javascript
 const DemoPage = require('./pages/demoPage');
 ```
-Which imports the page and allow access to the functions within.
+which imports the page and allow access to the functions within.
 
 ### Link the page
 
@@ -156,66 +174,16 @@ module.exports = {
 };
 ```
 
-## Check it out
+
+## Time to check it out
 Now go to your app's home page and click on the left button.
 
-You should arrive at a new page. But it will show 'undefined' as the template function we added above doesn't return anything.
-
-Let's fix that now.
-
-## Lets create some content!
-
-In order to display some content we will need the template function to return some text.
-
-We want the page to display "This is a demo" so we need the template() function to return a string:
-```javascript
-template() {
-    return `This is a demo.`;
-}
-```
-It's best to put your template function towards the end of the file to keep things readable.
-
-Now if we run our app (./go start) and click on the left button (or refresh the page) - and you should see your text 'This is a demo'.
-
-Now the tests should be passing because the content matches 👍 
-
-This is enough for the purpose of making the test pass, however, we are using handlebars throughout the application, this allows us to return HTML to the browser with a javascript function while simultaneously keeping the HTML and JavaScript separate. 
-
-If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
-
-## Handlebars!
-So let's use handlebars... First let's refactor our test to:
-```
-  describe('#template', () => {
-    it('should contain the correct text', () => {
-      const page = new DemoPage();
-      expect(page.template()).toContain('This is a demo using handlebars');
-    });
-  });
-});
-```
-Check that our test is failing.
-
-Now create a demoPage.hbs in the client/src/templates folder.
-
-Add the following to the demoPage.hbs
-```
-<p>This is a demo using handlebars</p>
-```
-
-Now we need to require (import) our hbs file in the demoPage.js and have our template function return the hbs content, to do this we need our demoPage.js to look like the following.
+You should arrive at a new page that displays
 
 ```
-const BasePage = require('watch-framework').BasePage;
-const compiledTemplate = require('../../templates/demoPage.hbs')
-
-class DemoPage extends BasePage {
-  template() {
-    return compiledTemplate();
-  }
-}
-
-module.exports = DemoPage;
+This is a demo
 ```
 
 And the tests should pass 💯 🥇 👯 🍡 
+
+If the above is true, congratulations, you've made your first page! 🎉🎉🎉🎉
