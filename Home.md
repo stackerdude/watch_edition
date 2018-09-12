@@ -9,7 +9,7 @@ Here's how to get started:
 Once you've completed the above, have a read of the following:
 * [Styling your page](Styling)
 * [Using buttons](Using-Buttons)
-* [Using the StorageHub](Storage)
+* [Using StorageHub](Using-StorageHub)
 * [View your code coverage](Code-Coverage)
 
 ### General knowledge:
