@@ -8,16 +8,16 @@ Everyone on the team should complete this exercise as soon as they have access t
 4. Add a test that checks for your name in the describe template tests. (The code should look similar to this)
 ```javascript
 
-  describe('#template', () => {
-    it('should have a template', () => {
+  describe('#render', () => {
+    it('should render my team page', () => {
       const page = new TeamPage();
-      expect(page.template()).toContain("<h1>Made by:</h1>");
+      expect(page.render()).toContain("<h1>Made by:</h1>");
     });
 
     it('should contain team members names', () => {
       const page = new TeamPage();
-      expect(page.template()).toContain("Sheila");
-      expect(page.template()).toContain("Bruce");
+      expect(page.render()).toContain("Sheila");
+      expect(page.render()).toContain("Bruce");
     });
   });
 
