@@ -1,23 +1,38 @@
 **Note!** Data saved into the storage module is not saved to disk. Any information you add to the storage after the app has started will be lost when you close the browser window.
 
-# Loading JSON files in to the storage module
+# Initialising the watch with data on startup
 
-1. Open `client/src/storage/index.js`
+1. Open `client/src/js/storage.js`, there is a hello world example in there already
 
-2. Require your JSON file `const myData = require("json!./my_data.json");`
+2. To add more data on startup, add any of the following in `client/src/js/storage.js`:
+    ```
+        StorageHub.setData('myData', 'hello')
+        StorageHub.setData('myData', [1, 2, 3])
+        StorageHub.setData('myData', { property: [1, 2, 3] })
+    ```
 
-3. Modify the Storage function to assign your JSON to a suitable property
+3. You can setData in any page or event.
 
+4. Access the data in a page of your choice. There is an example in `homePage.js` and `contactsPage.js` already.
+    ```
+        const StorageHub = require('watch-framework').StorageHub;
 
-        function Storage() {
-            // ...
-            this.myData = myData;
-            // ...
-        }
+        ...
 
+        StorageHub.getData('myData')
+    ```
 
-4. Open the view or file you wish to access the data from
+5. To debug the StorageHub, you can do the following:
 
-5. Require the storage module `const storage = require('../../storage');` (path may vary slightly)
+    ```
+        const StorageHub = require('watch-framework').StorageHub;
 
-6. Access the data `const foo = storage.myData.foo;`
+        ...
+
+        StorageHub.setDebug(true)
+        StorageHub.setData('myData', 'is stored!')
+        StorageHub.setDebug(false)
+    ```
+
+    This will end up printing the following:
+    ![](StorageHub.png)

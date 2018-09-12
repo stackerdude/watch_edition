@@ -1,6 +1,12 @@
 **How do I run a subset of tests?**
 
-Replace it and describe with fit or fdescribe
+When you run `./go test:dev`, this will start Jest in watch mode. It will present you with options on how to filter your tests.
+
+You can also do the following:
+```
+  describe.only('group of tests', () => { ... })
+  it.only('single test', () => { ... })
+```
 
 **Error: `libsass` bindings not found. Try reinstalling `node-sass`?**
 
