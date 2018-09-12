@@ -2,8 +2,8 @@
 
 Here's how to get started:
 1. Check you have everything [installed](Installation). 
-2. Make your [first commit](Tutorial-Your-first-commit). 
-3. Create your [first page](Tutorial-Creating-your-first-page). 
+2. Make your [first commit](Tutorial-1-~-Creating-your-first-page). 
+3. Create your [first page](./Tutorial-2:-Your-first-commit). 
 
 
 Once you've completed the above, have a read of the following:
