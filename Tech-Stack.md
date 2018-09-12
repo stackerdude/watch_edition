@@ -15,4 +15,3 @@ These are the infrastructure tools used to automate various tasks in your develo
 
 - [webpack](https://webpack.js.org/) - Module bundler
 - [CircleCI](https://circleci.com/) - Continuous Integration and Delivery
-- [Heroku](https://www.heroku.com/) - Staging environment
