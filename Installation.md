@@ -10,16 +10,7 @@ It's up to you how you install these. As long as they work correctly it doesn't 
 2. Install [Node](https://nodejs.org/en/) (the 'current' version)
 3. Install [CCTray](http://en.freedownloadmanager.org/Windows-PC/CruiseControl-NET-CCTray-FREE.html)
 4. Git clone your teams repo - further instructions on cloning a repository can be found [here](https://help.github.com/articles/cloning-a-repository/)
-
-**Now run the initial setup and start the app!**
-
-```shell
-cd path_to_team_repo
-npm install
-npm start
-```
-
-You should now be able to view the demo Proto Watch app in your browser at [http://localhost:8080](http://localhost:8080)
+5. Add `https://circleci.com/gh/twlevelup/{your_repo_name}.cc.xml` to CCTray
 
 ### OS X Setup Instructions
 
@@ -29,8 +20,8 @@ This article will help you get Node and NPM installed using Homebrew (our prefer
 2. [Installing Node.js v10 and npm using Homebrew on OS X](https://www.dyclassroom.com/howto-mac/how-to-install-nodejs-and-npm-on-mac-using-homebrew)
 3. Install [CCMenu](http://ccmenu.org/)
 4. Git clone your teams repo - further instructions on cloning a repository can be found [here](https://help.github.com/articles/cloning-a-repository/)
+5. Add `https://circleci.com/gh/twlevelup/{your_repo_name}.cc.xml` to CCMenu
    
-
 **Now run the initial setup and start the app!**
 
 ```shell
