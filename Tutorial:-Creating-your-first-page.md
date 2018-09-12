@@ -87,10 +87,10 @@ describe('The Demo Page', () => {
     watchFace = document.getElementById('watch-face');
   });
 
-  describe('#template', () => {
+  describe('#render', () => {
     it('should contain the correct text', () => {
       const page = new DemoPage();
-      expect(page.template()).toContain('This is a demo');
+      expect(page.render()).toContain('This is a demo');
     });
   });
 });
