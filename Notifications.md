@@ -2,7 +2,7 @@
 ***
 The watch is capable of creating different types of notifications. For this exercise we'll be creating a "Demo" notification that pops up saying "This is a demo notification"
 
- ✨**(S U R P R I S E !)**✨
+** ✨(S U R P R I S E !) ✨**
 
  We'll be using TDD AGAIN. This is your life now...
 
