@@ -98,7 +98,7 @@ const DemoNotification = require('./notifications/DemoNotification');
 
 ### Link the Notification
 
-We're almost there !! Now all we have to do is link it to be displayed in the dropdown list of options.
+We're almost there !! All we have to do is link it to be displayed in the dropdown list of options.
 
 In `notifications.js` we import our new notification and add it to the list. You should have something like this:
 ```javascript
@@ -114,6 +114,11 @@ const notifications = [
     view: DemoNotification,
   },
 
+```
+### Final touches
+One last thing before we see that sweet, sweet green pass. Go into `notifications.spec.js` and change in the line below to have length 3 because we now have 3 alerts in the dropdown list.
+```javascript
+expect(notifications).toHaveLength(2);
 ```
 
 ### Let's check out how it looks...
