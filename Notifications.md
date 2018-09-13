@@ -59,7 +59,7 @@ FAIL  client/spec/notifications/DemoNotification.spec.js
 
 ```
 
-### Make the test PASS ! (...yeah!!) ✅✅✅
+### Make the test PASS ! (...yeah!!)  ✅✅✅
 
 #### create the javascript file
 We need to define our Demo Notification now to make this test pass 😤
