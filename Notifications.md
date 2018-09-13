@@ -1,6 +1,6 @@
 # Creating Your First Notification
 
-The watch is capable of creating different types of notifications. For this exercise we'll be creating a "Demo" notification that pops up saying "This is a demo notification"
+The watch is capable of creating different types of notifications. For this exercise we'll be creating a demo notification that pops up saying "This is a Demo Notification"
 
  ✨ **(S U R P R I S E !)** ✨
 
@@ -84,7 +84,7 @@ Create a new file `client/src/templates/DemoNotification.hbs` and add our notifi
 
 ```html
 This is a Demo Notification:
-<div>
+<div id="message">
   {{message}}
 </div>
 ```
@@ -122,7 +122,66 @@ It should now display with some message
 This is a Demo Notification: [message]
 ```
 
-Congratulations !!
+Congratulations !! We're not done yet.
+
+### Configuring Buttons
+At the moment all the buttons hide the notification by default but we can change this (to whatever we want it to do..) !
+Let's configure the right arrow key to highlight the demo notification's message in red so we can see it clearer.
+
+### But first...
+ ~ Let's write a failing test ~ 
+In DemoNotification.spec.js add this test:
+```javascript
+
+    describe("#rightButtonEvent", () => {
+      it("highlight message in red", () => {
+        document.body.innerHTML = `<div id='message'></div>`;
+        const notification = new DemoNotification();
+        notification.rightButtonEvent();
+        expect(document.getElementById('message').style.backgroundColor).toBe('red');
+      });
+    });
+
+```
+It should fail. as usual. 
+The output should look something like this:
+```bash
+ FAIL  client/spec/notifications/DemoNotification.spec.js
+  DemoNotification
+    #render
+      ✓ should render my page correctly (115ms)
+    #rightButtonEvent
+      ✕ highlight message in red (71ms)
+
+  ● DemoNotification › #rightButtonEvent › highlight message in red
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "red"
+    Received: ""
+
+      14 |         const notification = new DemoNotification();
+      15 |         notification.rightButtonEvent();
+    > 16 |         expect(document.getElementById('message').style.backgroundColor).toBe('red');
+         |                                                                          ^
+      17 |       });
+      18 |     });
+      19 | });
+
+      at Object.<anonymous> (client/spec/notifications/DemoNotification.spec.js:16:74)
+```
+### Adding Button Functionality
+In `DemoNotification.js` add the following into the class under the line `template = require("../../templates/DemoNotification.hbs");`
+
+```javascript
+  rightButtonEvent() {
+    var messageDiv = document.getElementById("message");
+    messageDiv.style.backgroundColor = 'red';
+  }
+```
+
+and now... the tests should pass!! 
+
 But you know what...It kinda looks a bit boring 💩 
 So let's make it look a little... cuter! 🌸🍉💕(◠︿◠✿)
 
