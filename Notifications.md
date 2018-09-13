@@ -59,7 +59,7 @@ FAIL  client/spec/notifications/DemoNotification.spec.js
 
 ```
 
-### Make the test PASS ! (...yeah!!)
+### Make the test PASS ! (...yeah!!) ✅✅✅
 
 #### create the javascript file
 We need to define our Demo Notification now to make this test pass 😤
@@ -116,9 +116,9 @@ const notifications = [
 
 ```
 ### Final touches
-One last thing before we see that sweet, sweet green pass. Go into `notifications.spec.js` and change in the line below to have length 3 because we now have 3 alerts in the dropdown list.
+One last thing before we see that 💚 sweet, sweet green pass 💚. Go into `notifications.spec.js` and change in the line below to have length 3 because we now have 3 alerts in the dropdown list.
 ```javascript
-expect(notifications).toHaveLength(2);
+expect(notifications).toHaveLength(3);
 ```
 
 ### Let's check out how it looks...
