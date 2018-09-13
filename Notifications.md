@@ -24,13 +24,15 @@ Let's add a test to check for the phrase "This is a Demo Notification:"
 
 ```javascript
 
-describe("AlertNotification", () => {
-  describe("#render", () => {
-    it("should render my page correctly", () => {
-      const notification = new AlertNotification();
-      expect(notification.render()).toContain("Alert");
+const DemoNotification = require("../../src/js/notifications/DemoNotification");
+
+describe("DemoNotification", () => {
+    describe("#render", () => {
+      it("should render my page correctly", () => {
+        const notification = new DemoNotification();
+        expect(notification.render()).toContain("This is a Demo Notification:");
+      });
     });
-  });
 });
 
 ```
@@ -121,3 +123,18 @@ This is a Demo Notification: [message]
 ```
 
 Congratulations !!
+But you know what...It kinda looks a bit boring 💩💩 
+So let's make it look a little... cuter! 🌸🍉💕(◠︿◠✿)
+
+### Adding an Image
+There is only one person for the job...
+![](https://www.photospng.com/uploads/pusheen-on-the-phone-graphic.png)
+
+Let's add an image of our choice to the `client/src/images` folder.
+
+In our handlebars page add it in the image tag and you should have something like this:
+```html
+<img src="../images/busyPusheen.png" height="100">
+```
+
+Let's see how it looks!
