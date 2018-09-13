@@ -143,6 +143,7 @@ Hmm...🤔🤔 it's not that cute. something is missing!!
 ### Adding an Image
 There is only one person who can save us now...
 ![](https://www.photospng.com/uploads/pusheen-on-the-phone-graphic.png)
+ 
   **^ ^ ^ PUSHEEN**
 
 Let's add Pusheen or an image of your choice to the `client/src/images` folder.
