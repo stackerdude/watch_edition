@@ -123,11 +123,25 @@ This is a Demo Notification: [message]
 ```
 
 Congratulations !!
-But you know what...It kinda looks a bit boring 💩💩 
+But you know what...It kinda looks a bit boring 💩 
 So let's make it look a little... cuter! 🌸🍉💕(◠︿◠✿)
 
+### Styling the Notifications Page
+All the styling for our notifications is contained in `./framework/styles/notification.scss`
+The black background of the pop-up really isn't that appealing. Let's change the background colour to something lighter and also put a shiny, pink border around it!
+Something like this...:
+```css
+#notification-container {
+  background-color: #f2ece4;
+  color: #036;
+  border-color: #b37399;
+  box-shadow: 0 0 10px #b37399;
+```
+
+Hmm...🤔🤔 it's not that cute. something is missing!!
+
 ### Adding an Image
-There is only one person for the job...
+There is only one person who can save us now...
 ![](https://www.photospng.com/uploads/pusheen-on-the-phone-graphic.png)
 
 Let's add an image of our choice to the `client/src/images` folder.
@@ -138,3 +152,6 @@ In our handlebars page add it in the image tag and you should have something lik
 ```
 
 Let's see how it looks!
+Purrfect that's how it looks. (Hahahahahahaha get it? because Pusheen is a cat and cats PURR)
+
+
