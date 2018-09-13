@@ -7,7 +7,7 @@ The watch is capable of creating different types of notifications. For this exer
  We'll be using TDD AGAIN. This is your life now...
 
 Here are the principles again for your reference:
-```
+```markdown
 * Write a failing test
 * Write just enough code to make the test pass
     * YAGNI - You Ain't Going To Need It
