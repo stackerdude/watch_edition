@@ -143,8 +143,9 @@ Hmm...🤔🤔 it's not that cute. something is missing!!
 ### Adding an Image
 There is only one person who can save us now...
 ![](https://www.photospng.com/uploads/pusheen-on-the-phone-graphic.png)
+  **^ ^ ^ PUSHEEN**
 
-Let's add an image of our choice to the `client/src/images` folder.
+Let's add Pusheen or an image of your choice to the `client/src/images` folder.
 
 In our handlebars page add it in the image tag and you should have something like this:
 ```html
@@ -152,6 +153,7 @@ In our handlebars page add it in the image tag and you should have something lik
 ```
 
 Let's see how it looks!
-Purrfect that's how it looks. (Hahahahahahaha get it? because Pusheen is a cat and cats PURR)
+Purrfect ~ ♡ 
+(Hahahahahahaha get it? because Pusheen is a cat and cats PURR)
 
-
+Good job!!
