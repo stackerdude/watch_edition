@@ -19,7 +19,7 @@ Open `client/spec/pages/homePage.spec.js`
 Add the following test above the test for `#rightButtonEvent`:
 ```javascript
 
-describe('#leftButtonEvent', () => {
+describe('#faceButtonEvent', () => {
   it('should take the user to the demo page', () => {
     const props = {
       navigate: () => { },
@@ -28,7 +28,7 @@ describe('#leftButtonEvent', () => {
     const page = new HomePage(props);
     spyOn(page, 'navigate');
 
-    page.leftButtonEvent();
+    page.faceButtonEvent();
     expect(page.navigate).toHaveBeenCalledWith('demo');
   });
 });
@@ -40,7 +40,7 @@ This test should fail with an output similar to the following:
 ```bash
 
 FAIL  client/spec/pages/homePage.spec.js
-  ● HomePage › #leftButtonEvent › goes to demo page
+  ● HomePage › #faceButtonEvent › goes to demo page
 
     expect(spy).toHaveBeenCalledWith(expected)
 
@@ -57,16 +57,16 @@ FAIL  client/spec/pages/homePage.spec.js
 
 ## Get the test to pass
 
-To get this test passing we need to ensure that when a leftButtonEvent from the homepage occurs that navigate is being called with ‘demo’.
+To get this test passing we need to ensure that when a faceButtonEvent from the homepage occurs that navigate is being called with ‘demo’.
 
-The first step is to add the leftButtonEvent() function in the homePage.js file, that parses ‘demo’.
+The first step is to add the faceButtonEvent() function in the homePage.js file, that parses ‘demo’.
 
 ```javascript
-  leftButtonEvent() {
+  faceButtonEvent() {
     this.navigate('demo');
   }
 ```
-This gives the left button from the home page some logic and will make our test pass.
+This gives the face button from the home page some logic and will make our test pass.
 
 ## Create the page
 
@@ -156,7 +156,7 @@ which imports the page and allow access to the functions within.
 
 ### Link the page
 
-So we have our new page demoPage.js and we have our leftButtonEvent() in homePage.js which is trying to navigate there, to link these together we need to require our demoPage in our `routes.js` file.
+So we have our new page demoPage.js and we have our faceButtonEvent() in homePage.js which is trying to navigate there, to link these together we need to require our demoPage in our `routes.js` file.
 
 ```javascript
 const HomePage = require('./pages/homePage');
@@ -176,7 +176,7 @@ module.exports = {
 
 
 ## Time to check it out
-Now go to your app's home page and click on the left button.
+Now go to your app's home page and click on the face button.
 
 You should arrive at a new page that displays
 
