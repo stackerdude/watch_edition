@@ -12,7 +12,7 @@ The principles of Test Driven Development are straightforward:
 * Rinse and repeat
 
 
-### Write a failing test
+### Write failing test
 
 Open `client/spec/pages/homePage.spec.js`
 
@@ -158,6 +158,28 @@ which imports the page and allow access to the functions within.
 
 So we have our new page demoPage.js and we have our faceButtonEvent() in homePage.js which is trying to navigate there, to link these together we need to require our demoPage in our `routes.js` file.
 
+#### Write a test first!
+
+open up `watch_edition/client/spec/routes.spec.js`
+
+and add the following
+
+```javascript
+const routes = require('../src/js/routes');
+
+describe('routes', () => {
+  it('all routes should exist', () => {
+    expect(routes['/']).toBeDefined();
+    expect(routes['contacts']).toBeDefined();
+    expect(routes['team']).toBeDefined();
+    expect(routes['404']).toBeDefined();
+    expect(routes['demo']).toBeDefined();
+  });
+});
+```
+Run the test...
+
+then go to `routes.js` and add this!
 ```javascript
 const HomePage = require('./pages/homePage');
 const ContactsPage = require('./pages/ContactsPage');
