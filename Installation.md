@@ -8,7 +8,7 @@ It's up to you how you install these. As long as they work correctly it doesn't 
 
 1. Install [Git](https://git-scm.com/downloads)
 2. Install [Node](https://nodejs.org/en/) (the 'current' version)
-3. Install [CCTray](http://ccmenu.org/)
+3. Install [CCTray](http://sourceforge.net/projects/ccnet/files/CruiseControl.NET%20Releases/CruiseControl.NET%201.8.5/)
 4. Git clone your teams repo - further instructions on cloning a repository can be found [here](https://help.github.com/articles/cloning-a-repository/)
 5. Add `https://circleci.com/gh/twlevelup/{your_repo_name}.cc.xml` to CCTray
 
