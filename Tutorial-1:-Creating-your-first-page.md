@@ -145,15 +145,6 @@ To add content to a page, you must edit the handlebars file.
 
 If you'd like to learn a little more about handlebars (.hbs) you can read more [here](https://www.sitepoint.com/a-beginners-guide-to-handlebars/) 
 
-#### final notes
-
-This is the starting point for every new page. We’re creating a new type of view which extends the base page, we then append `module.exports = DemoPage;` to allow the page to be exported and used in other files
-
-```javascript
-const DemoPage = require('./pages/demoPage');
-```
-which imports the page and allow access to the functions within.
-
 ### Link the page
 
 So we have our new page demoPage.js and we have our faceButtonEvent() in homePage.js which is trying to navigate there, to link these together we need to require our demoPage in our `routes.js` file.
