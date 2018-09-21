@@ -6,4 +6,8 @@ You can add sound effects to the watch alerts and buttons with the watch's Audio
 
 2. Move your chosen sound effect to `client/src/sounds/`. This is where all audio files are and will be stored. 
 
-3. Now you can access and play the sound effects via the AudioHub using `AudioHub.playSound('./client/src/sounds/demo.mp3',1);`. The second parameter is volume control, 0 being no sound and 1 being the loudest. If no parameter is provided, the volume is 1 by default.
+3. Now you can access and play the sound effects via the AudioHub using 
+
+`AudioHub.playSound('./client/src/sounds/demo.mp3',1);`
+
+ The second parameter is volume control, 0 being no sound and 1 being the loudest. If no parameter is provided, the volume is 1 by default.
