@@ -6,7 +6,7 @@ Let's add an existing sound to one of the buttons on the watch.
 
 1. Navigate to `./client/src/sounds`. In this directory, you should see the mp3 file `plop.mp3`. Now let's make this sound play whenever the left button is pressed from the homepage.
 
-2. AudioHub has one function called `playSound` which takes two parameters. The first parameter takes the file path for the sound you want to use (In our case, it is `./client/src/sounds`.) The second parameter is optional and controls the volume and if let blank, the volume will default to 100%.
+2. AudioHub has one function called `playSound()` which takes two parameters. The first parameter takes the file path for the sound you want to use (In our case, it is `./client/src/sounds`.) The second parameter is optional and controls the volume and if let blank, the volume will default to 100%.
 
 3. Navigate to `./client/src/js/pages/homePage.js`. In the `leftButtonEvent()` function, add the line `AudioHib.playSound("./client/src/sounds").
 
