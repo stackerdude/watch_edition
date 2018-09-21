@@ -11,6 +11,7 @@ Once you've completed the above, have a read of the following:
 * [Styling your page](./Styling)
 * [Using buttons](./Using-Buttons)
 * [Using StorageHub](./Using-StorageHub)
+* [Using AudioHub](./Using-AudioHub)
 * [View your code coverage](./Code-Coverage)
 
 ### General knowledge:
