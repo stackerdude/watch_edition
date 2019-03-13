@@ -8,6 +8,16 @@ repository. As it is cloud based, it doesn't matter what type of laptop ('develo
 _Note: Your trainers will provide you with the full URL for your project_
 1. Add `gitpod.io#` to the start of the github link of your team's repo  
     `gitpod.io#https://github.com/twlevelup/syd-2019-s1-<teamname>`
+    
+    Optionally, you can download the _Gitpod_ chrome extension. This adds a link on your github repo that will 
+    autommatically take you to the development environment. No typing needed!!!
+
+    This can be downloaded from [here](https://chrome.google.com/webstore/detail/gitpod-online-ide/dodmmooeoklaejobgleioelladacbeki)
+
+    Now when you go to your teams repo, you should see somthing like this 
+    
+    ![Alt Text](gitpod_ext.png)
+
 2. Click `Login with Github and launch workspace`
 3. Authorize _Typefox_ (the makers of gitpod), to access your github account. This allows them to 
 make commits on your behalf. 
